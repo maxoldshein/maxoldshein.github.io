@@ -8,3 +8,19 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.jumbotron p {
+	font-size: 25px;
+	color: #fff;
+}
+
+.jumbotron h1 {
+	font-size: 40px;
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+}
+
+.jumbotron .container {
+	position: relative;
+	top: 100px;
+}
