@@ -1,3 +1,10 @@
 .navigation li{
 	display: inline;
 }
+
+.jumbtron {
+	background-image: url(http://www.bc.edu/publications/chronicle/FeaturesNewsTopstories/2011/features/gasson090811/_jcr_content/newscontent/textimage/image.img.jpg);
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
