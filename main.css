@@ -27,6 +27,10 @@
 	top: 100px;
 }
 
-.experience .container .row .col-md-12 .thumbnail a {
+.experience .container .row .col-md-12 .thumbnail img {
+	height: 50px;
+}
+
+.experience .container .row .col-md-4 .thumbnail img {
 	height: 50px;
 }
