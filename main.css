@@ -11,7 +11,7 @@
 
 .jumbotron p {
 	font-size: 25px;
-	color: #fff;
+	color: black;
 	font-weight: bold;
 }
 
@@ -19,7 +19,7 @@
 	font-size: 40px;
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
-	color: #fff;
+	color: black;
 }
 
 .jumbotron .container {
