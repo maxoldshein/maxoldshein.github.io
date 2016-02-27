@@ -10,18 +10,16 @@
 }
 
 .jumbotron p {
-	top: 150px;
 	font-size: 25px;
-	color: #FFFFFF;
+	color: black;
 	font-weight: bold;
 }
 
 .jumbotron h1 {
-	top: 100px;
 	font-size: 40px;
 	font-family: 'Shift', sans-serif;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: black;
 }
 
 .jumbotron .container {
