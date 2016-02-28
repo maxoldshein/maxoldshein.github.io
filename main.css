@@ -30,3 +30,11 @@
 .col-md-4 .thumbnail img {
 	height: 100px;
 }
+
+.carousel-inner h3{
+	color: #000000;
+}
+
+.carousel-inner p{
+	color: #000000;
+}
