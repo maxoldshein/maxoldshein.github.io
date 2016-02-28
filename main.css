@@ -27,6 +27,6 @@
 	top: 100px;
 }
 
-.col-md-4 .thumbnail img {
-	height: 100px;
+.row {
+	background-color: #D1D1E0;
 }
