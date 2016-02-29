@@ -35,10 +35,10 @@ body {
 	background-color: #A9A9A9;
 }
 
-.navbar ul {
+.navbar .collapse {
 	color: #FFFFFF;
 }
 
-.navbar a {
+.navbar .navbar-header {
 	color: #FFFFFF;
 }
