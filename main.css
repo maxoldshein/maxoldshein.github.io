@@ -22,23 +22,3 @@
 	position: relative;
 	top: 100px;
 }
-
-.first-row {
-	background-color: #D1D1E0;
-}
-
-body {
-	background-color: #D3D3D3;
-}
-
-.navbar {
-	background-color: #A9A9A9;
-}
-
-.navbar .collapse {
-	color: #FFFFFF;
-}
-
-.navbar .navbar-header {
-	color: #FFFFFF;
-}
