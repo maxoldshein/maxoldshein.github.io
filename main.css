@@ -1,7 +1,3 @@
-.navigation li{
-	display: inline;
-}
-
 .jumbotron {
 	background-image: url('http://static1.squarespace.com/static/529bd419e4b0d642edda84e6/5341fd18e4b0258f115b6822/54792377e4b00f7531ca0957/1417225092293/EI1A5729-4.jpg?format=1000w');
 	height: 500px;
@@ -28,9 +24,5 @@
 }
 
 .first-row {
-	background-color: #D1D1E0;
-}
-
-.container {
 	background-color: #D1D1E0;
 }
