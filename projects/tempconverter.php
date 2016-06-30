@@ -37,5 +37,9 @@
 		    </div>
 		  </div>
 		</nav>
+
+		<?php
+			ehco "Hello there!"
+		?>
 	</body>
 </html>
