@@ -70,7 +70,7 @@ function getCookie(cookieName) {
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
         }
-        
+
         if (c.indexOf(name) == 0) {
             return c.substring(name.length, c.length);
         }
@@ -100,7 +100,7 @@ function checkCookies() {
 
 	if (name != "") {
 		if (wage != "") {
-			window.alert("Welcome back, " + name + ". Your hourly wage is " +  wage + ".");
+			window.alert("Welcome back, " + name + ". Your hourly wage is $" +  wage + ".");
 			employeeName.value = name;
 			hourlyWage.value = wage;
 		} else {
