@@ -8,11 +8,11 @@ function calculateHours() {
 	var weekDates = employeeForm.elements['weekDates'].value;
 	var mondayHours = employeeForm.elements['mondayhours'].value;
 	var tuesdayHours = employeeForm.elements['tuesdayhours'].value;
-	var wednesdayHours = employeeForm.elements['wednesdayHours'].value;
+	var wednesdayHours = employeeForm.elements['wednesdayhours'].value;
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
 	var fridayHours = employeeForm.elements['fridayhours'].value;
 
-	if(employeeName === "" || hourlyWage === "" || weekDates === "" || mondayHours === "" || tuesdayHours === "" || wednesdayHours === "" || thursdayHours === "" || fridayhours === "") {
+	if(employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	}
 }
