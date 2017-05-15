@@ -61,7 +61,7 @@ function setCookie(cookieName, cookieValue, expirationTime) {
 
 function getCookie(cookieName) {
 	var name = cookieName + "=";
-	var cookieArray = doucment.cookie.split(';');
+	var cookieArray = document.cookie.split(';');
 
 	for (var i = 0; i < cookieArray; i++) {
 		var c = cookieArray[i];
