@@ -13,7 +13,7 @@ function calculateHours() {
 	var tuesdayHours = employeeForm.elements['tuesdayhours'].value;
 	var wednesdayHours = employeeForm.elements['wednesdayhours'].value;
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
-	var fridayHours = employeeForm.elements['fridayhours'].value;\
+	var fridayHours = employeeForm.elements['fridayhours'].value;
 
 	console.log("Hourly wage: " + isNaN(hourlyWage));
 	console.log("Monday Hours: " + isNaN(mondayHours));
