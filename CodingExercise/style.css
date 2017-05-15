@@ -8,6 +8,10 @@ fieldset {
 	width: 95%;
 }
 
+#timesheetIMG {
+	max-width: 99%;
+}
+
 #nameWageWeek {
 	width: 50%;
 	margin: 0px auto;
