@@ -7,7 +7,7 @@ fieldset {
 }
 
 #nameWageWeek {
-	width: 50%;
+	width: 60%;
 	margin: 0px auto;
 }
 
@@ -17,11 +17,11 @@ fieldset {
 }
 
 #daysOfWeek {
-	width: 80%;
+	width: 90%;
 	margin: 0px auto;
 }
 
 #employeeName, #hourlyWage, #weekNumber, #mondayHours, #tuesdayHours, #wednesdayHours, #thursdayHours, #fridayHours {
-	margin-left: 10px;
-	margin-right: 10px; 
+	margin-left: 5px;
+	margin-right: 5px; 
 }
