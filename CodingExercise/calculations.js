@@ -39,7 +39,7 @@ function calculateHours() {
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
 					"Hourly wage: $" + hourlyWageNumber.toFixed(2) + "/hour<br>" +
 					"Monday Hours: " + mondayHoursNumber.toFixed(2) + " hours<br>" +
-					"Tuesday Hours: " + tuesdayHours.toFixed(2) + " hours<br>" +
+					"Tuesday Hours: " + tuesdayHoursNumber.toFixed(2) + " hours<br>" +
 					"Wendesday Hours " + wednesdayhoursNumber.toFixed(2) + " hours<br>" + 
 					"Thursday Hours: " + thursdayHoursNumber.toFixed(2) + " hours<br>" +
 					"Friday Hours: " + fridayHoursNumber.toFixed(2) + " hours<br>" +
