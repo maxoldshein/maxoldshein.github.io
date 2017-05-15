@@ -5,6 +5,7 @@ h1 {
 fieldset {
 	border: 1px solid black;
 	margin: 0px auto;
+	width: 90%;
 }
 
 #nameWageWeek {
@@ -23,5 +24,6 @@ fieldset {
 }
 
 #submit {
+	width: 10%
 	margin: 0px auto;
 }
