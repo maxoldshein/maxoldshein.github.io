@@ -32,3 +32,8 @@ fieldset {
 	width: 25%;
 	margin: 0px auto;
 }
+
+#footer {
+	text-align: center;
+	background: grey;
+}
