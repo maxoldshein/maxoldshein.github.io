@@ -34,7 +34,7 @@ fieldset {
 }
 
 #clearCookies {
-	width: 25%;
+	display: block;
 	margin: 0px auto;
 }
 
