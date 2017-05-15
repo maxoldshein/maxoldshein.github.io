@@ -6,7 +6,7 @@ fieldset {
 	border: 1px solid black;
 }
 
-#nameHoursWeek, #dailyHours, #MTWTF {
+#nameWageWeek, #dailyHours, #daysOfWeek {
 	width: 50%;
 	margin: 0px auto;
 }
