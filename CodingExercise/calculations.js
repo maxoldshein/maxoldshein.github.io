@@ -25,12 +25,12 @@ function calculateHours() {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
 
-		var hourlyWageNumber = parseFloat(hourlyWage).toFixed(2);
-		var mondayHoursNumber = parseFloat(mondayHours).toFixed(2);
-		var tuesdayHoursNumber = parseFloat(tuesdayHours).toFixed(2);
-		var wednesdayhoursNumber = parseFloat(wednesdayHours).toFixed(2);
-		var thursdayHoursNumber = parseFloat(thursdayHours).toFixed(2);
-		var fridayHoursNumber = parseFloat(fridayHours).toFixed(2);
+		var hourlyWageNumber = parseFloat(hourlyWage);
+		var mondayHoursNumber = parseFloat(mondayHours).;
+		var tuesdayHoursNumber = parseFloat(tuesdayHours);
+		var wednesdayhoursNumber = parseFloat(wednesdayHours);
+		var thursdayHoursNumber = parseFloat(thursdayHours);
+		var fridayHoursNumber = parseFloat(fridayHours);
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
 		var totalPay = hourlyWageNumber * totalHours;
 		var totalPayFixed = totalPay.toFixed(2);
