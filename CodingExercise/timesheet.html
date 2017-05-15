@@ -3,6 +3,7 @@
 <head>
 	<title>Employee Timesheet</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="calculations.js"></script>
 </head>
 <body>
 
@@ -31,7 +32,7 @@
 					Friday: <input type="text" id="fridayhours" name="fridayhours" placeholder="Ex.: 8">
 				</div>
 				<br>
-				<input type="submit" id="submit" name="submit" value="Submit">
+				<input type="submit" id="submit" name="submit" value="Calculate" onclick="calculateHours()">
 				<br>
 				<div id="innerHTML"></div>
 			</fieldset>
