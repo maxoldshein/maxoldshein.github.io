@@ -53,6 +53,7 @@ function calculateHours() {
 }
 
 function setCookie(cookieName, cookieValue, expirationTime) {
+	console.log("!!IN SET COOKIE!!");
 	var date = new Date();
 	date.setTime(date.getTime() + (expirationTime * 24 * 60 * 60 * 1000));
 	var expiration = date.toUTCString();
@@ -60,6 +61,7 @@ function setCookie(cookieName, cookieValue, expirationTime) {
 }
 
 function getCookie(cookieName) {
+	console.log("!!IN GET COOKIE!!");
 	var name = cookieName + "=";
 	var cookieArray = document.cookie.split(';');
 
