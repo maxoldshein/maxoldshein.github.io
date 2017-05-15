@@ -101,7 +101,7 @@ function checkHourlyWageCookie() {
 function clearNameWageCookies() {
 	document.cookie = "employeeName=; expires=Mon, 01 Jan 1990 00:00:00 UTC; path=/;";
 	document.cookie = "hourlyWage=; expires=Mon, 01 Jan 1990 00:00:00 UTC, path=/;";
-	return false;
+	window.alert("Saved Name and Wage deleted!");
 }
 
 //Main function to check cookies on page load.
