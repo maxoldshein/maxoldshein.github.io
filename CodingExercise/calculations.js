@@ -26,7 +26,7 @@ function calculateHours() {
 	} else {
 
 		var hourlyWageNumber = parseFloat(hourlyWage);
-		var mondayHoursNumber = parseFloat(mondayHours).;
+		var mondayHoursNumber = parseFloat(mondayHours);
 		var tuesdayHoursNumber = parseFloat(tuesdayHours);
 		var wednesdayhoursNumber = parseFloat(wednesdayHours);
 		var thursdayHoursNumber = parseFloat(thursdayHours);
