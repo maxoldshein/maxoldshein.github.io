@@ -53,7 +53,6 @@ function calculateHours() {
 }
 
 function setCookie(cookieName, cookieValue, expirationTime) {
-	console.log("!!IN SET COOKIE!!");
 	var date = new Date();
 	date.setTime(date.getTime() + (expirationTime * 24 * 60 * 60 * 1000));
 	var expiration = date.toUTCString();
@@ -88,12 +87,14 @@ function checkHourlyWageCookie() {
 	return wage;
 }
 
+function clearCookies() {
+	document.cookie="employeeName=; expires=Mon, 01 Jan 1990 00:00:00 UTC; path=/;";
+	document.cookie="hourlyWage=; expires=Mon, 01 Jan 1990 00:00:00 UTC, path=/;";
+}
+
 function checkCookies() {
-	console.log("!!IN CHECKED COOKIES!!");
 	var name = checkEmployeeNameCookie();
 	var wage = checkHourlyWageCookie();
-	console.log("Name is:" + name);
-	console.log("Wage is:" + wage);
 	var employeeForm = document.forms['employeeform'];
 	var employeeName = employeeForm.elements['employeename'];
 	var hourlyWage = employeeForm.elements['hourlywage'];
