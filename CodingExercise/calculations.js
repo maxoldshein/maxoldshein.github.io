@@ -15,24 +15,24 @@ function calculateHours() {
 	if(employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
-		var hourlyWageNumber = parseFloat(hourlyWage);
+		var hourlyWageNumber = parseFloat(hourlyWage).toFixed(2);
 		var mondayHoursNumber = parseInt(mondayHours);
 		var tuesdayHoursNumber = parseInt(tuesdayHours);
 		var wednesdayhoursNumber = parseInt(wednesdayHours);
 		var thursdayHoursNumber = parseInt(thursdayHours);
 		var fridayHoursNumber = parseInt(fridayHours)
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
-		var totalPay = hourlyWageNumber * totalHours;
-		var roundedTotalPay = totalPay.toFixed(2);
+		var totalPay = (hourlyWageNumber * totalHours).toFixed(2);
+		
 
-		var text = "Hourly wage is: " + hourlyWageNumber + "<br>" +
+		var text = "Hourly wage is: $" + hourlyWageNumber + "<br>" +
 					"Monday Hours: " + mondayHoursNumber + "<br>" +
 					"Tuesday Hours: " + tuesdayHours + "<br>" +
 					"Wendesday Hours " + wednesdayhoursNumber + "<br>" + 
 					"Thursday Hours: " + thursdayHoursNumber + "<br>" +
 					"Friday Hours: " + fridayHours + "<br>" +
 					"Total Hours: " + totalHours + "<br>" + 
-					"Total Pay: " + roundedTotalPay;
+					"Total Pay: $" + totalPay;
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
