@@ -66,7 +66,7 @@ function getCookie(cookieName) {
 	var cookieArray = document.cookie.split(';');
 	console.log(cookieArray);
 
-	for (var i = 0; i < cookieArray; i++) {
+	for (var i = 0; i < cookieArray.length; i++) {
 		var c = cookieArray[i];
 
 		while (c.charAt(0) == ' ') {
