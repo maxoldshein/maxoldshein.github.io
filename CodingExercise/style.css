@@ -29,6 +29,6 @@ fieldset {
 }
 
 #hourCalculations {
-	display: block;
-	margin: auto;
+	width: 50%;
+	margin: 0px auto;
 }
