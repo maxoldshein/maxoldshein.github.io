@@ -39,12 +39,12 @@ fieldset {
 }
 
 #footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:100px;
-   width:100%;
-   background:#999;
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   height: 75px;
+   width: 100%;
+   background: #999;
 }
 
 .footer {
