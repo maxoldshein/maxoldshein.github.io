@@ -7,5 +7,6 @@ fieldset {
 }
 
 #nameWageWeek, #dailyHours, #daysOfWeek {
+	width: 100%;
 	margin: 0px auto;
 }
