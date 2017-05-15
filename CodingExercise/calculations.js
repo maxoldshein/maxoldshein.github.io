@@ -15,6 +15,8 @@ function calculateHours() {
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
 	var fridayHours = employeeForm.elements['fridayhours'].value;
 
+	console.log("Is NaN hourlyWage: " + isNaN(hourlyWage));
+
 	/*if (employeeName != "" || employeeName != null) {
 		setCookie("employeeName", employeeName, 1);
 	}*/
