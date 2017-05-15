@@ -38,8 +38,6 @@ function calculateHours() {
 		var totalPay = hourlyWageNumber * totalHoursNumber;
 		var totalPayNumber = parseFloat(totalPay);
 
-		
-
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
 					"Hourly wage: $" + hourlyWageNumber.toFixed(2) + "/hour<br>" +
 					"Monday Hours: " + mondayHoursNumber.toFixed(2) + " hours<br>" +
@@ -56,6 +54,7 @@ function calculateHours() {
 	}
 }
 
+//Set the cookies.
 function setCookie(cookieName, cookieValue, expirationTime) {
 	var date = new Date();
 	date.setTime(date.getTime() + (expirationTime * 24 * 60 * 60 * 1000));
@@ -63,6 +62,7 @@ function setCookie(cookieName, cookieValue, expirationTime) {
 	document.cookie = cookieName + "=" + cookieValue + ";" + expiration + ";path=/";
 }
 
+//Get the cookies.
 function getCookie(cookieName) {
     var name = cookieName + "=";
     var cookieArray = document.cookie.split(';');
@@ -81,22 +81,26 @@ function getCookie(cookieName) {
     return "";
 }
 
+//Helper function to get the employee name cookie.
 function checkEmployeeNameCookie() {
 	var employee = getCookie("employeeName");
 	return employee;
 }
 
+//Helper function to get the hourly wage cookie.
 function checkHourlyWageCookie() {
 	var wage = getCookie("hourlyWage");
 	return wage;
 }
 
+//Clear the cookies.
 function clearNameWageCookies() {
-	document.cookie="employeeName=; expires=Mon, 01 Jan 1990 00:00:00 UTC; path=/;";
-	document.cookie="hourlyWage=; expires=Mon, 01 Jan 1990 00:00:00 UTC, path=/;";
+	document.cookie = "employeeName=; expires=Mon, 01 Jan 1990 00:00:00 UTC; path=/;";
+	document.cookie = "hourlyWage=; expires=Mon, 01 Jan 1990 00:00:00 UTC, path=/;";
 	return false;
 }
 
+//Main function to check cookies on page load.
 function checkCookies() {
 	var name = checkEmployeeNameCookie();
 	var wage = checkHourlyWageCookie();
