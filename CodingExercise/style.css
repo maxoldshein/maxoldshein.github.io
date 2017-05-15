@@ -6,6 +6,6 @@ fieldset {
 	border: 1px solid black;
 }
 
-.nameHoursWeek, .dailyHours, .MTWTF {
+#nameHoursWeek, #dailyHours, #MTWTF {
 	margin: 0px auto;
 }
