@@ -33,7 +33,7 @@ function calculateHours() {
 		var fridayHoursNumber = parseFloat(fridayHours);
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
 		var totalPay = hourlyWageNumber * totalHours;
-		var totalPayFixed = totalPay.toFixed(2);
+		var totalPayFixed = parseFloat(totalPay).toFixed(2);
 		
 
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
