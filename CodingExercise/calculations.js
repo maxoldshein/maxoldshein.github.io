@@ -92,6 +92,8 @@ function checkCookies() {
 	console.log("!!IN CHECKED COOKIES!!");
 	var name = checkEmployeeNameCookie();
 	var wage = checkHourlyWageCookie();
+	console.log("Name is:" + name);
+	console.log("Wage is:" + wage);
 	var employeeForm = document.forms['employeeform'];
 	var employeeName = employeeForm.elements['employeename'];
 	var hourlyWage = employeeForm.elements['hourlywage'];
