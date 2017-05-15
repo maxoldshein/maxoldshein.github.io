@@ -20,8 +20,3 @@ fieldset {
 	width: 90%;
 	margin: 0px auto;
 }
-
-#employeeName, #hourlyWage, #weekNumber, #mondayHours, #tuesdayHours, #wednesdayHours, #thursdayHours, #fridayHours {
-	margin-left: 2px;
-	margin-right: 2px; 
-}
