@@ -12,7 +12,7 @@ function calculateHours() {
 	var thursdayHours = employeeForm.elements['thursdayhours'];
 	var fridayHours = employeeForm.elements['fridayhours'];
 
-	if(employeeName == "" || hourlyWage == "" || weekDates == "" || mondayHours == "" || tuesdayHours == "" || wednesdayHours == "" || thursdayHours == "" || fridayhours == "") {
+	if(employeeName === "" || hourlyWage === "" || weekDates === "" || mondayHours === "" || tuesdayHours === "" || wednesdayHours === "" || thursdayHours === "" || fridayhours === "") {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	}
 }
