@@ -9,8 +9,9 @@ fieldset {
 }
 
 #timesheetIMG {
-	width: 95%;
+	width: 50%;
 	height: 300px;
+	margin: 0px auto;
 }
 
 #nameWageWeek {
