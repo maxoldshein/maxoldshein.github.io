@@ -32,7 +32,8 @@ function calculateHours() {
 		var thursdayHoursNumber = parseFloat(thursdayHours).toFixed(2);
 		var fridayHoursNumber = parseFloat(fridayHours).toFixed(2);
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
-		var totalPay = (hourlyWageNumber * totalHours).toFixed(2);
+		var totalPay = hourlyWageNumber * totalHours;
+		var totalPayFixed = totalPay.toFixed(2);
 		
 
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
@@ -43,7 +44,7 @@ function calculateHours() {
 					"Thursday Hours: " + thursdayHoursNumber + " hours<br>" +
 					"Friday Hours: " + fridayHoursNumber + " hours<br>" +
 					"Total Hours: " + totalHours + " hours<br>" + 
-					"Total Pay: $" + totalPay + "<br>" +
+					"Total Pay: $" + totalPayFixed + "<br>" +
 					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
