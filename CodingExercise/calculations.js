@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", checkCookies);
-
 function calculateHours() {
 
 	//Get a reference to the form.
