@@ -45,8 +45,8 @@ function calculateHours() {
 					"Wendesday Hours " + wednesdayhoursNumber.toFixed(2) + " hours<br>" + 
 					"Thursday Hours: " + thursdayHoursNumber.toFixed(2) + " hours<br>" +
 					"Friday Hours: " + fridayHoursNumber.toFixed(2) + " hours<br>" +
-					"Total Hours: " + totalHours.toFixed(2) + " hours<br>" + 
-					"Total Pay: $" + totalPay.toFixed(2) + "<br>" +
+					"Total Hours: " + totalHoursNumber.toFixed(2) + " hours<br>" + 
+					"Total Pay: $" + totalPayNumber + "<br>" +
 					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
