@@ -13,7 +13,14 @@ function calculateHours() {
 	var tuesdayHours = employeeForm.elements['tuesdayhours'].value;
 	var wednesdayHours = employeeForm.elements['wednesdayhours'].value;
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
-	var fridayHours = employeeForm.elements['fridayhours'].value;
+	var fridayHours = employeeForm.elements['fridayhours'].value;\
+
+	console.log("Hourly wage: " + isNaN(hourlyWage));
+	console.log("Monday Hours: " + isNaN(mondayHours));
+	console.log("Tuesday Hours: " + isNaN(tuesdayHours));
+	console.log("wednesday Hours: " + isNaN(wednesdayHours));
+	console.log("Thursday Hours: " + isNaN(thursdayHours));
+	console.log("Friday Hours: " + isNaN(fridayHours));
 
 
 	if (employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
