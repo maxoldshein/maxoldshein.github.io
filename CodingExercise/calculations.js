@@ -1,6 +1,6 @@
 function calculateHours() {
 	//Get a reference to the form.
-	var employeeForm = documents.forms['employeeform'];
+	var employeeForm = document.forms['employeeform'];
 
 	//Get references to the elements of the form.
 	var employeeName = employeeForm.elements['employeename'];
