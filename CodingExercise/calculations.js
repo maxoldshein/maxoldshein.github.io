@@ -1,3 +1,5 @@
+//Maxwell Oldshein - Athenium Coding Exercise
+
 function calculateHours() {
 
 	//Get a reference to the form.
