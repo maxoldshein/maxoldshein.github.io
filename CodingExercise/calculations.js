@@ -23,6 +23,7 @@ function calculateHours() {
 		var fridayHoursNumber = parseInt(fridayHours)
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
 		var totalPay = hourlyWageNumber * totalHours;
+		var roundedTotalPay = totalPay.toFixed(2);
 
 		var text = "Hourly wage is: " + hourlyWageNumber + "<br>" +
 					"Monday Hours: " + mondayHoursNumber + "<br>" +
