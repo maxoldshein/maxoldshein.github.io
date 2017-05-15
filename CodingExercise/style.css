@@ -2,16 +2,7 @@ h1 {
     text-align: center;
 }
 
-table.fieldset {
+fieldset {
 	margin: 0px auto;
 	border: 1px solid black;
 }
-
-table {
-	margin: 0px auto;
-}
-
-.rowone, .rowtwo, .rowthree {
-	margin: 0px auto;
-}
-

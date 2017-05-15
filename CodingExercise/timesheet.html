@@ -12,15 +12,23 @@
 		<form action="" id="employeeform" onsubmit="return false">
 			<fieldset>
 				<legend>Enter your information</legend>
-				Name: <input type="text" id="employeename" name="employeename" placeholder="Enter your name">
-				Hourly Wage: $<input type="text" id="hourlywage" name="hourlywage" placeholder="Ex.: 9.00">
-				Week Number: <input type="text" id="weeknumber" name="weeknumber" placeholder="Ex.: 1,2,3,.."><br>
-				Daily Hours:<br>
-				Monday: <input type="text" id="mondayhours" name="mondayhours" placeholder="Ex.: 8">
-				Tuesday: <input type="text" id="tuesdayhours" name="tuesdayhours" placeholder="Ex.: 8">
-				Wednesday: <input type="text" id="wednesdayhours" name="wednesdayhours" placeholder="Ex.: 8">
-				Thursday: <input type="text" id="thursdayhours" name="thursdayhours" placeholder="Ex.: 8">
-				Friday: <input type="text" id="fridayhours" name="fridayhours" placeholder="Ex.: 8">
+				<div id="nameWageWeek">
+					Name: <input type="text" id="employeename" name="employeename" placeholder="Enter your name">
+					Hourly Wage: $<input type="text" id="hourlywage" name="hourlywage" placeholder="Ex.: 9.00">
+					Week Number: <input type="text" id="weeknumber" name="weeknumber" placeholder="Ex.: 1,2,3,.."><br>
+				</div>
+				<br>
+				<div id="dailyHours">
+					DailyHours
+				</div>
+				<br>
+				<div id="daysOfWeek">
+					Monday: <input type="text" id="mondayhours" name="mondayhours" placeholder="Ex.: 8">
+					Tuesday: <input type="text" id="tuesdayhours" name="tuesdayhours" placeholder="Ex.: 8">
+					Wednesday: <input type="text" id="wednesdayhours" name="wednesdayhours" placeholder="Ex.: 8">
+					Thursday: <input type="text" id="thursdayhours" name="thursdayhours" placeholder="Ex.: 8">
+					Friday: <input type="text" id="fridayhours" name="fridayhours" placeholder="Ex.: 8">
+				</div>
 			</fieldset>
 		</form>
 	</div>
