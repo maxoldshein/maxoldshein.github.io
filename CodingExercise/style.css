@@ -24,6 +24,6 @@ fieldset {
 }
 
 #submit {
-	width: 50%
-	margin: 0px auto;
+	display: block;
+	margin: auto;
 }
