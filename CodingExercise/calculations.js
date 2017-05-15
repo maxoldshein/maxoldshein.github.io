@@ -33,7 +33,8 @@ function calculateHours() {
 					"Thursday Hours: " + thursdayHoursNumber + "<br>" +
 					"Friday Hours: " + fridayHours + "<br>" +
 					"Total Hours: " + totalHours + "<br>" + 
-					"Total Pay: $" + totalPay;
+					"Total Pay: $" + totalPay + "<br>" +
+					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
