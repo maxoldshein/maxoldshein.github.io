@@ -1,4 +1,4 @@
 function calculateHours() {
-	var employeeForm = document.forms["employeeform"];
-	
+	var divobject = document.getElementById('hourCalculations');
+	divobject.innerHTML = "JavaScript is working!";
 }
