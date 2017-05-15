@@ -15,18 +15,11 @@ function calculateHours() {
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
 	var fridayHours = employeeForm.elements['fridayhours'].value;
 
-	console.log("Is NaN hourlyWage: " + isNaN(hourlyWage));
-
-	/*if (employeeName != "" || employeeName != null) {
-		setCookie("employeeName", employeeName, 1);
-	}*/
-
-	/*if (hourlyWage != "" || hourlyWage != null) {
-		setCookie("hourlyWage", hourlyWage, 1);
-	}*/
 
 	if (employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
+	} else if (isNaN(hourlyWage) || isNaN(mondayHours) || isNaN(tuesdayHours) || isNaN(wednesdayHours) || isNaN(thursdayHours) || isNaN(fridayHours)) {
+		window.alert("You entered something that wasn't a number in the hourly wage or daily hours fields!");
 	} else {
 		setCookie("employeeName", employeeName, 1);
 		setCookie("hourlyWage", hourlyWage, 1);
