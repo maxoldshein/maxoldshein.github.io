@@ -14,5 +14,13 @@ function calculateHours() {
 
 	if(employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
+	} else {
+		var totalHours = parseInt(mondayHours) + parseInt(tuesdayHours) + parseInt(wednesdayhours) + parseInt(thursdayHours) + parseInt(fridayHours);
+		var totalPayment = parseFloat(hourlyWage) * totalHours;
+
+		var text = "Payment for " + employeeName + " for the week " + weekDates ": " + totalPayment;
+
+		var divobject = document.getElementById('hourCalculations');
+		divobject.innerHTML = text;
 	}
 }
