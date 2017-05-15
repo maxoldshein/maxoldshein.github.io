@@ -1,4 +1,4 @@
-document.body.addEventListener('load', checkCookies);
+document.addEventListener("DOMContentLoaded", checkCookies);
 
 function calculateHours() {
 
