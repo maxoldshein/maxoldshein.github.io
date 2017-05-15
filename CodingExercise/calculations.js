@@ -1,4 +1,5 @@
 function calculateHours() {
+
 	//Get a reference to the form.
 	var employeeForm = document.forms['employeeform'];
 
@@ -12,31 +13,90 @@ function calculateHours() {
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
 	var fridayHours = employeeForm.elements['fridayhours'].value;
 
-	if(employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
+	if (employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
+
 		var hourlyWageNumber = parseFloat(hourlyWage).toFixed(2);
-		var mondayHoursNumber = parseInt(mondayHours);
-		var tuesdayHoursNumber = parseInt(tuesdayHours);
-		var wednesdayhoursNumber = parseInt(wednesdayHours);
-		var thursdayHoursNumber = parseInt(thursdayHours);
-		var fridayHoursNumber = parseInt(fridayHours)
+		var mondayHoursNumber = parseFloat(mondayHours).toFixed(2);
+		var tuesdayHoursNumber = parseFloat(tuesdayHours).toFixed(2);
+		var wednesdayhoursNumber = parseFloat(wednesdayHours).toFixed(2);
+		var thursdayHoursNumber = parseFloat(thursdayHours).toFixed(2);
+		var fridayHoursNumber = parseFloat(fridayHours).toFixed(2);
 		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
 		var totalPay = (hourlyWageNumber * totalHours).toFixed(2);
 		
 
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
-					"Hourly wage is: $" + hourlyWageNumber + "<br>" +
-					"Monday Hours: " + mondayHoursNumber + "<br>" +
-					"Tuesday Hours: " + tuesdayHours + "<br>" +
-					"Wendesday Hours " + wednesdayhoursNumber + "<br>" + 
-					"Thursday Hours: " + thursdayHoursNumber + "<br>" +
-					"Friday Hours: " + fridayHours + "<br>" +
-					"Total Hours: " + totalHours + "<br>" + 
+					"Hourly wage is: $" + hourlyWageNumber + " hours<br>" +
+					"Monday Hours: " + mondayHoursNumber + " hours<br>" +
+					"Tuesday Hours: " + tuesdayHours + " hours<br>" +
+					"Wendesday Hours " + wednesdayhoursNumber + " hours<br>" + 
+					"Thursday Hours: " + thursdayHoursNumber + " hours<br>" +
+					"Friday Hours: " + fridayHoursNumber + " hours<br>" +
+					"Total Hours: " + totalHours + " hours<br>" + 
 					"Total Pay: $" + totalPay + "<br>" +
 					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
+	}
+}
+
+function setCookie(cookieName, cookieValue, expirationTime) {
+	var date = new Date();
+	date.setTime(date.getTime() + (expirationTime * 24 * 60 * 60 * 1000));
+	var expiration = date.toUTCString();
+	document.cookie = cookieName + "=" + cookieValue + ";" + expiration + ";path=/";
+}
+
+function getCookie(cookieName) {
+	var name = cookieName + "=";
+	var cookieArray = doucment.cookie.split(';');
+
+	for (var i = 0; i < cookieArray; i++) {
+		var c = cookieArray[i];
+
+		while (c.charAt(0) == ' ') {
+			c.substring(1);
+		}
+
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+
+	return "";
+}
+
+function checkEmployeeNameCookie() {
+	var employee = getCookie("employeeName");
+	return employee;
+}
+
+function checkHourlyWageCookie() {
+	var wage = getCookie("hourlyWage");
+	return wage;
+}
+
+function checkCookies() {
+	var name = checkEmployeeNameCookie();
+	var wage = checkHourlyWageCookie();
+	var employeeForm = document.forms['employeeform'];
+	var employeeName = employeeForm.elements['employeename'];
+	var hourlyWage = employeeForm.elements['hourlywage'];
+
+	if (name != "") {
+		if (wage != "") {
+			window.alert("Welcome back, " + name + ". Your hourly wage is " +  wage + ".");
+			employeeName.value = name;
+			hourlyWage.value = wage;
+		} else {
+			window.alert("Welcome back, " + name + ".");
+			employeeName.value = name;
+		}
+	} else {
+		employeeName.value = "";
+		hourlyWage.value = "";
 	}
 }
