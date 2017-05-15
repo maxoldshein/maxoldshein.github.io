@@ -37,14 +37,14 @@ function calculateHours() {
 		
 
 		var text = "Pay summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
-					"Hourly wage is: $" + hourlyWageNumber + "/hour<br>" +
-					"Monday Hours: " + mondayHoursNumber + " hours<br>" +
-					"Tuesday Hours: " + tuesdayHours + " hours<br>" +
-					"Wendesday Hours " + wednesdayhoursNumber + " hours<br>" + 
-					"Thursday Hours: " + thursdayHoursNumber + " hours<br>" +
-					"Friday Hours: " + fridayHoursNumber + " hours<br>" +
-					"Total Hours: " + totalHours + " hours<br>" + 
-					"Total Pay: $" + totalPayFixed + "<br>" +
+					"Hourly wage: $" + hourlyWageNumber.toFixed(2) + "/hour<br>" +
+					"Monday Hours: " + mondayHoursNumber.toFixed(2) + " hours<br>" +
+					"Tuesday Hours: " + tuesdayHours.toFixed(2) + " hours<br>" +
+					"Wendesday Hours " + wednesdayhoursNumber.toFixed(2) + " hours<br>" + 
+					"Thursday Hours: " + thursdayHoursNumber.toFixed(2) + " hours<br>" +
+					"Friday Hours: " + fridayHoursNumber.toFixed(2) + " hours<br>" +
+					"Total Hours: " + totalHours.toFixed(2) + " hours<br>" + 
+					"Total Pay: $" + totalPayFixed.toFixed(2) + "<br>" +
 					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
