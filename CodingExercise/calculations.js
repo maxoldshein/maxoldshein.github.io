@@ -16,8 +16,18 @@ function calculateHours() {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
 		var hourlyWageNumber = parseFloat(hourlyWage);
+		var mondayHoursNumber = parseInt(mondayHours);
+		var tuesdayHoursNumber = parseInt(tuesdayHours);
+		var wednesdayhoursNumber = praseInt(wednesdayHours);
+		var thursdayHoursNumber = parseInt(thursdayHours);
+		var fridayHoursNumber = parseInt(fridayHours)
 
-		var text = "Hourly wage is: " + hourlyWageNumber;
+		var text = "Hourly wage is: " + hourlyWageNumber + "<br>" +
+					"Monday Hours: " + mondayHoursNumber + "<br>" +
+					"Tuesday Hours: " + tuesdayHours + "<br>" +
+					"Wendesday Hours " + wednesdayhoursNumber + "<br>" + 
+					"Thursday Hours: " + thursdayHoursNumber + "<br>" +
+					"Friday Hours " + fridayHours + "<br>";
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
