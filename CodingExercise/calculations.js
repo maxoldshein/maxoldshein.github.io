@@ -21,13 +21,15 @@ function calculateHours() {
 		var wednesdayhoursNumber = parseInt(wednesdayHours);
 		var thursdayHoursNumber = parseInt(thursdayHours);
 		var fridayHoursNumber = parseInt(fridayHours)
+		var totalHours = mondayHoursNumber + tuesdayHoursNumber + wednesdayhoursNumber + thursdayHoursNumber + fridayHoursNumber;
 
 		var text = "Hourly wage is: " + hourlyWageNumber + "<br>" +
 					"Monday Hours: " + mondayHoursNumber + "<br>" +
 					"Tuesday Hours: " + tuesdayHours + "<br>" +
 					"Wendesday Hours " + wednesdayhoursNumber + "<br>" + 
 					"Thursday Hours: " + thursdayHoursNumber + "<br>" +
-					"Friday Hours " + fridayHours + "<br>";
+					"Friday Hours: " + fridayHours + "<br>" +
+					"Total Hours: " + totalHours;
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
