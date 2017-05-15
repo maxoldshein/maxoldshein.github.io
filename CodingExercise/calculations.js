@@ -17,6 +17,10 @@ function calculateHours() {
 		setCookie("employeeName", employeeName, 1);
 	}
 
+	if (hourlyWage != "" || hourlyWage != null) {
+		setCookie("hourlyWage", hourlyWage, 1);
+	}
+
 	if (employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
@@ -76,18 +80,32 @@ function checkEmployeeNameCookie() {
 	return employee;
 }
 
+function checkHourlyWageCookie() {
+	var wage = getCookie("hourlyWage");
+	return wage;
+}
+
 function checkCookies() {
 	console.log("!!IN CHECKED COOKIES!!");
 	var name = checkEmployeeNameCookie();
 	var wage = checkHourlyWageCookie();
 	console.log("Name is:" + name);
+	console.log("Wage is:" + wage);
 	var employeeForm = document.forms['employeeform'];
 	var employeeName = employeeForm.elements['employeename'];
+	var hourlyWage = employeeForm.elements['hourlywage'];
 
 	if (name != "") {
-		window.alert("Welcome back, " + name + ".");
-		employeeName.value = name;
+		if (wage != "") {
+			window.alert("Welcome back, " + name + ". Your hourly wage is " +  wage + ".");
+			employeeName.value = name;
+			hourlyWage.value = wage;
+		} else {
+			window.alert("Welcome back, " + name + ".");
+			employeeName.value = name;
+		}
 	} else {
 		employeeName.value = "";
+		hourlyWage.value = "";
 	}
 }
