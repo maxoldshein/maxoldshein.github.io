@@ -18,7 +18,7 @@ function calculateHours() {
 		var totalHours = parseInt(mondayHours) + parseInt(tuesdayHours) + parseInt(wednesdayhours) + parseInt(thursdayHours) + parseInt(fridayHours);
 		var totalPayment = parseFloat(hourlyWage) * totalHours;
 
-		var text = "Payment for " + employeeName + " for the week " + weekDates ": " + totalPayment;
+		var text = "Payment for " + employeeName + " for the week " + weekDates + ": " + totalPayment;
 
 		var divobject = document.getElementById('hourCalculations');
 		divobject.innerHTML = text;
