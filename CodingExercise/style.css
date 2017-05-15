@@ -6,3 +6,7 @@ table.fieldset {
 	margin: 0px auto;
 	border: 1px solid black;
 }
+
+table {
+	margin: 0px auto;
+}
