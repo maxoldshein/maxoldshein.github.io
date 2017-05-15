@@ -25,7 +25,8 @@ function calculateHours() {
 		var totalPay = (hourlyWageNumber * totalHours).toFixed(2);
 		
 
-		var text = "Hourly wage is: $" + hourlyWageNumber + "<br>" +
+		var text = "Summary for " + employeeName + " for the week of " + weekDates + ":<br>" +
+					"Hourly wage is: $" + hourlyWageNumber + "<br>" +
 					"Monday Hours: " + mondayHoursNumber + "<br>" +
 					"Tuesday Hours: " + tuesdayHours + "<br>" +
 					"Wendesday Hours " + wednesdayhoursNumber + "<br>" + 
