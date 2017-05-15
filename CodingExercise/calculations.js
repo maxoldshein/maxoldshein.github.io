@@ -13,6 +13,14 @@ function calculateHours() {
 	var thursdayHours = employeeForm.elements['thursdayhours'].value;
 	var fridayHours = employeeForm.elements['fridayhours'].value;
 
+	if (employeeName != "" || employeeName != null) {
+		setCookie("employeeName", employeeName, 1);
+	}
+
+	if (hourlyWage != "" || hourlyWage != null) {
+		setCookie("hourlyWage", hourlyWage, 1);
+	}
+
 	if (employeeName == "" || employeeName == null || hourlyWage == "" || hourlyWage == null || weekDates == "" || weekDates == null || mondayHours == "" || mondayHours == null || tuesdayHours == "" || tuesdayHours == null || wednesdayHours == "" || wednesdayHours == null || thursdayHours === "" || thursdayHours == null || fridayhours === "" || fridayHours == null) {
 		window.alert("Make sure that all of the fields are filled in before you click 'Calculate'!");
 	} else {
