@@ -46,7 +46,7 @@ function calculateHours() {
 					"Thursday Hours: " + thursdayHoursNumber.toFixed(2) + " hours<br>" +
 					"Friday Hours: " + fridayHoursNumber.toFixed(2) + " hours<br>" +
 					"Total Hours: " + totalHoursNumber.toFixed(2) + " hours<br>" + 
-					"Total Pay: $" + totalPayNumber + "<br>" +
+					"Total Pay: $" + totalPayNumber.toFixed(2) + "<br>" +
 					"Manager Signature: ______________________";
 
 		var divobject = document.getElementById('hourCalculations');
