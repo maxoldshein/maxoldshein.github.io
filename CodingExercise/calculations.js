@@ -87,7 +87,7 @@ function checkHourlyWageCookie() {
 	return wage;
 }
 
-function clearCookies() {
+function clearNameWageCookies() {
 	document.cookie="employeeName=; expires=Mon, 01 Jan 1990 00:00:00 UTC; path=/;";
 	document.cookie="hourlyWage=; expires=Mon, 01 Jan 1990 00:00:00 UTC, path=/;";
 	return false;
