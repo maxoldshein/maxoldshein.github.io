@@ -56,6 +56,10 @@ fieldset {
    background: #d3d3d3;
 }
 
+#hourCalculations {
+	border: 1px solid black;
+}
+
 .footer {
 	text-align: center;
 }
