@@ -114,7 +114,7 @@ function checkCookies() {
 
 	if (name != "") {
 		if (wage != "") {
-			window.alert("Welcome back, " + name + ". We have your hourly wage as $" +  wage + ".");
+			window.alert("Welcome back, " + name + ". We have your hourly wage as $" +  wage + "/hour.");
 			employeeName.value = name;
 			hourlyWage.value = wage;
 		} else {
