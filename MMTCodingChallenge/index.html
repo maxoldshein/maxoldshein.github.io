@@ -62,8 +62,6 @@
 			d.bboList.ask = +(d.bboList.ask / 10000);
 			d.bboList.bid = +(d.bboList.bid / 10000);
 			d.bboList.timeStr = parseTime(d.bboList.timeStr);
-			d.tradeList.time = parseTime(d.tradeList.time / 1000000);
-			d.tradeList.price = +(d.tradeList.price / 10000);
 		})
 
 		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr ;}));
