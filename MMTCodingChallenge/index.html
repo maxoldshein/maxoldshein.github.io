@@ -50,11 +50,17 @@
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-		data.forEach(function(d) {
+		*/data.forEach(function(d) {
 			d.bboList.ask = +d.bboList.ask;
 			d.bboList.timeStr = parseTime(d.bboList.timeStr);
 			console.log("timeStr: " + d.bboList);
-		})
+		})*/
+
+		for (var i = 0; i < data.length; i++) {
+			d.bboList.ask = +(parsePennies(d.bboList.ask));
+			d.bboList.timeStr = parseTime(d.bboList.timeStr);
+			console.log("timeStr: " + d.bboList);
+		}
 
 		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
 		y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
