@@ -24,6 +24,10 @@
 	loadJSON(function(response) {
 		console.log("IN LOAD JSON");
 		var data = JSON.parse(response);
+
+		console.log("data: " + data);
+		console.log("bboList: " + data);
+		console.log("tradeList: " + data);
 		
 		function parsePennies(num) {return (num / 10000);}
 
