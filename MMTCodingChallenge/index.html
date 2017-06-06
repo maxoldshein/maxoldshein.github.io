@@ -28,6 +28,8 @@
 		console.log("data: " + data);
 		console.log("bboList: " + data);
 		console.log("tradeList: " + data);
+
+		alert(data.bboList[0].ask + " " + data.bboList[0].timeStr);
 		
 		function parsePennies(num) {return (num / 10000);}
 
