@@ -39,7 +39,7 @@
 		var y = d3.scaleLinear()
 			.range([height, 0]);
 
-		var line = d3.line()
+		var line = d3.area()
 			.x(function(d) {return x(d.bboList.timeStr);})
 			.y(function(d) {return y(d.bboList.ask);})
 
