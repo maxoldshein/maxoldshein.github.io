@@ -1,8 +1,8 @@
 body {
-  font: 10px sans-serif;
+	font: 10px sans-serif;
 }
 
-h1{
+h1{		
 	margin: 0px auto;
 }
 
@@ -14,11 +14,11 @@ h1{
 }
 
 .x.axis path {
-  display: none;
+	display: none;
 }
 
 .line {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 1.5px;
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 1.5px;
 }
