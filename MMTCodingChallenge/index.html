@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>MMT Coding Challenge</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<script src="stock.json"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
@@ -14,6 +13,23 @@
 </html>
 
 <script>
-	var data = JSON.parse(stock);
-	console.log(data);
+	function loadJSON(callback) {
+		var xobj = new XMLHttpRequest();
+		xobj.overideMimeType("application/JSON");
+		xobj.open('GET', 'stock.json', true);
+		xobj.onreadystatechange = function() {
+			if (xobj.readyState == 4 && xobj.status == "200") {
+				callback(xobj.responseText);
+			}
+		}
+		xobj.send(null);
+	}
+
+	loadJSON(function (response) {
+		var bboListData = JSON.parse(response.bboList);
+		var tradeListData = JSON.parse(response.tradeList);
+
+		console.log("bboList: " + bboListData);
+		console.log("tradeListData" + tradeListData);
+	});
 </script>
