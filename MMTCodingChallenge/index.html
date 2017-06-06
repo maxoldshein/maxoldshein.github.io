@@ -13,8 +13,6 @@
 </html>
 
 <script>
-	var data;
-
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
 		xobj.overrideMimeType("application/json");
@@ -25,7 +23,7 @@
 	}
 
 	loadJSON(function(response) {
-		data = JSON.parse(response);
+		var data = JSON.parse(response);
 	});
 
 	var margin = {top: 20, right: 20, bottom: 30, left: 50},
