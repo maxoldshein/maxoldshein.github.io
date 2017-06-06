@@ -8,7 +8,6 @@
 </head>
 <body>
 	<h1>MMT Coding Challenge</h1>
-	<div id="contentDiv"></div>
 <script>
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
@@ -50,7 +49,7 @@
 
 		line.interpolate('step-after');
 
-		var svg = d3.select("contentDiv").append("svg")
+		var svg = d3.select("body").append("svg")
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
 			.append("g")
