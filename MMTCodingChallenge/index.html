@@ -13,6 +13,9 @@
 </html>
 
 <script>
+	var bboListData;
+	var tradeListData;
+
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
 		xobj.overrideMimeType("application/JSON");
@@ -26,10 +29,17 @@
 	}
 
 	loadJSON(function (response) {
-		var bboListData = JSON.parse(response.bboList);
-		var tradeListData = JSON.parse(response.tradeList);
+		var data = JSON.parse(response);
+		
+		for (var i = 0; i < data.bboList.length; i++) {
+			bboListData[i] = data.bboList[i];
+		}
 
-		console.log("bboList: " + bboListData);
-		console.log("tradeListData" + tradeListData);
+		for (var i = 0; i < data.tradeList.length; i++) {
+			tradeListData[i] = data.tradeList[i];
+		}
+
+		console.log("bboListData: " + bboListData);
+		console.log("tradeListData: " + tradeListData);
 	});
 </script>
