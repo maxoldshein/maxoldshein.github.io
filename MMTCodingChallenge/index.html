@@ -60,8 +60,6 @@
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var data = d3.json("stock.json");
-
 	data.forEach(function(d) {
 		d.bboList.ask = +(d.bboList.ask / 10000);
 		d.bboList.bid = +(d.bboList.bid / 10000);
