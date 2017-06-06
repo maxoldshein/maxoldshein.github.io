@@ -18,6 +18,7 @@
 	}
 
 	loadJSON(function(response) {
+		console.log("IN LOAD JSON");
 		var data = JSON.parse(response);
 		
 		function parsePennies(num) {return (num / 10000);}
