@@ -55,7 +55,7 @@
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		data.forEach(function(d) {
-			d.bboList.ask = +(parsePennies(d.bboList.ask));
+			d.bboList.ask = +d.bboList.ask;
 			d.bboList.timeStr = parseTime(d.bboList.timeStr);
 		})
 
