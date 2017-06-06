@@ -62,6 +62,8 @@
 			console.log("timeStr: " + d.bboList);
 		})*/
 
+		alert(parsePennies(data.bboList[0].ask) + " " + parseTime(data.bboList[0].timeStr));
+
 		for (var i = 0; i < data.bboList.length; i++) {
 			data.bboList[i].ask = +(parsePennies(data.bboList.ask));
 			data.bboList[i].timeStr = parseTime(data.bboList.timeStr);
