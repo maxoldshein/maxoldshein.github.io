@@ -15,7 +15,7 @@
 <script>
 	function loadJSON(callback) {
 		var xobj = new XMLHttpRequest();
-		xobj.overideMimeType("application/JSON");
+		xobj.overrideMimeType("application/JSON");
 		xobj.open('GET', 'stock.json', true);
 		xobj.onreadystatechange = function() {
 			if (xobj.readyState == 4 && xobj.status == "200") {
