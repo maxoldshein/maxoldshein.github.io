@@ -24,7 +24,8 @@
 
 	loadJSON(function(response) {
 		var data = JSON.parse(response);
-	
+		
+		function parsePennies(num) = return (num / 10000);
 
 		var margin = {top: 20, right: 20, bottom: 30, left: 50},
 			width = 960 - margin.left - margin.right,
@@ -59,8 +60,7 @@
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		data.forEach(function(d) {
-			d.bboList.ask = +(d.bboList.ask / 10000);
-			d.bboList.bid = +(d.bboList.bid / 10000);
+			d.bboList.ask = +(parsePennies(d.bboList.ask));
 			d.bboList.timeStr = parseTime(d.bboList.timeStr);
 		})
 
