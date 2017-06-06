@@ -59,12 +59,12 @@
 	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
 
 	svg.append("g")
-		.attr("class", "x axis");
-		.attr("transform", "translate(0," + height + ")");
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
 		.call(xAxis);
 
 	svg.append("g")
-		.attr("class", "y axis");
+		.attr("class", "y axis")
 		.call(yAxis)
 		.append("text")
 		.attr("transform", "rotate(-90)")
@@ -76,5 +76,5 @@
 	svg.append("g")
 		.datum(data)
 		.attr("class", "line")
-		.attr("d", line)
+		.attr("d", line);
 </script>
