@@ -2,6 +2,10 @@ body {
   font: 10px sans-serif;
 }
 
+h1{
+	margin: 0px auto;
+}
+
 .axis path,
 .axis line {
   fill: none;
