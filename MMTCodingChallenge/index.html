@@ -42,8 +42,7 @@
 		var line = d3.area()
 			.x(function(d) {return x(d.bboList.timeStr);})
 			.y(function(d) {return y(d.bboList.ask);})
-
-		line.interpolate('step-after');
+			.curve(d3.curveStepAfter);
 
 		var svg = d3.select("body").append("svg")
 			.attr("width", width + margin.left + margin.right)
