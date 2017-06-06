@@ -60,6 +60,7 @@
 			data.bboList[i].ask = +(parsePennies(data.bboList.ask));
 			data.bboList[i].timeStr = parseTime(data.bboList.timeStr);
 			console.log("timeStr: " + parseTime(data.bboList[i].timeStr));
+			console.log("ask: " + data.bboList[i].ask);
 		}
 
 		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
