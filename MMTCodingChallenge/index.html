@@ -47,8 +47,34 @@
 
 	var data = d3.json("stock.json");
 
-	console.log("data: " + data);
+	data.forEach(function(d) {
+		d.bboList.ask = +(d.bboList.ask / 10000);
+		d.bboList.bid = +(d.bboList.bid / 10000);
+		d.bboList.timeStr = parseTime(d.bboList.timeStr);
+		d.tradeList.time = parseTime(d.tradeList.time / 1000000);
+		d.tradeList.price = +(d.tradeList.price / 10000);
+	})
 
 	x.domain(d3.extent(data, function(d) { return d.bboList.timeStr ;}));
-	y.domain(d3.extent(data, function(d) { return d.bboList.ask;}))
+	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
+
+	svg.append("g")
+		.attr("class", "x axis");
+		.attr("transform", "translate(0," + height + ")");
+		.call(xAxis);
+
+	svg.append("g")
+		.attr("class", "y axis");
+		.call(yAxis)
+		.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 6)
+		.attr("dy", ".71em")
+		.attr("text-anchor", "end")
+		.text("Price ($)");
+
+	svg.append("g")
+		.datum(data)
+		.attr("class", "line")
+		.attr("d", line)
 </script>
