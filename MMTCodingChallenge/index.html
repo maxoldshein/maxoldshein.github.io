@@ -28,9 +28,9 @@
     	.curve(d3.curveStepAfter);
 
     var area = d3.area()
-    	.x(function(d) { return x(d.timeStr)})
+    	.x(function(d) { return valueline.x(d)})
     	.y0(height)
-    	.y1(function(d) {return y(d.ask)});
+    	.y1(function(d) {return valueline.y(d)});
 	// append the svg obgect to the body of the page
 	// appends a 'group' element to 'svg'
 	// moves the 'group' element to the top left margin
