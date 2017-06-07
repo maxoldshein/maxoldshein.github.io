@@ -39,23 +39,23 @@
 		return d;
 	}, function(error, data) {
 		if (error) throw error;
+
+		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
+		y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
+
+		svg.append("g")
+			.attr("transform", "translate(0," + height + ")")
+			.call(d3.axisBottom(x));
+
+		svg.append("g")
+			.call(d3.axisLeft(y))
+			.text("Price ($)");
+
+		svg.append("g")
+			.datum(data)
+			.attr("class", "line")
+			.attr("d", line);
 	});
-
-	x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
-	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
-
-	svg.append("g")
-		.attr("transform", "translate(0," + height + ")")
-		.call(d3.axisBottom(x));
-
-	svg.append("g")
-		.call(d3.axisLeft(y))
-		.text("Price ($)");
-
-	svg.append("g")
-		.datum(data)
-		.attr("class", "line")
-		.attr("d", line);
 </script>
 </body>
 </html>
