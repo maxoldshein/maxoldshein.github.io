@@ -34,10 +34,13 @@ var svg = d3.select("body").append("svg")
 d3.json("stock.json", function(error, data) {
   if (error) throw error;
   // format the data
-  data.forEach(function(d) {
-      d.bboList.timeStr = parseTime(d.bboList.timeStr);
-      d.bboList.ask = +d.bboList.ask;
-  });
+  for (k in data) {
+  	var k_data = data[k];
+  	k_data.forEach(function(d) {                              
+  		d.timeStr = parseDate(d.timeStr);                          
+  		d.ask = +d.ask;                               
+  	});
+  }
   // Scale the range of the data
   x.domain(d3.extent(data, function(d) { return d.bboList.timeStr; }));
   y.domain([0, d3.max(data, function(d) { return d.bboList.ask; })]);
