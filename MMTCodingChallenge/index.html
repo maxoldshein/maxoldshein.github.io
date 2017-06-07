@@ -66,7 +66,13 @@
 	  	d.ask = +tempVal;
 	  	tempVal1 = parsePennies(d.bid);
 	  	d.bid = +tempVal1
+
+	  	console.log("d.bid: " + d.bid);
+	  	console.log("d.ask: " + d.ask);
 	  });
+
+	  console.log("min: " + d3.min(data, function(d) { return d.bid; }));
+	  console.log("max: " + d3.max(data, function(d) { return d.ask; }));
 
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
