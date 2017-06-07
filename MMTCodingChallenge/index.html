@@ -60,7 +60,7 @@
 
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
-	  y.domain([d3.min(data, function(d) { return d.ask; }) - .4, d3.max(data, function(d) { return d.ask; }) + .01]);
+	  y.domain([d3.min(data, function(d) { return d.ask; }) - .4, d3.max(data, function(d) { return d.ask; }) + .001]);
 
 	  svg.append("path")
 	      .data([data])
