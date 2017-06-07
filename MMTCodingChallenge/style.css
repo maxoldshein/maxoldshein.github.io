@@ -18,12 +18,12 @@ h1 {
 }
 
 .line {
-  stroke: black;
+  stroke: steelblue;
   fill: none;
   stroke-width: 2px;
 }
 
 .area {
-	fill: black;
+	fill: steelblue;
 	stroke-width: 0px;
 }
