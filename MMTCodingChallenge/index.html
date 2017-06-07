@@ -69,8 +69,8 @@
 	  });
 
 	  // Scale the range of the data
-	  x.domain(d3.extent(data, function(d) { return d.timeStr; })).range(0, width);
-	  y.domain([d3.min(data, function(d) { return d.bid; }), d3.max(data, function(d) { return d.ask; })]).range(height, 0);
+	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
+	  y.domain([d3.min(data, function(d) { return d.bid; }), d3.max(data, function(d) { return d.ask; })]);
 
 	  //Add the area path
 	  svg.append("path")
