@@ -14,7 +14,7 @@
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
-	var parseTime = d3.timeParse("%H:%M %p");
+	var parseTime = d3.timeParse("%H:%M;");
 
 	var x = d3.scaleTime()
 		.range([0, width]);
@@ -33,10 +33,16 @@
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var data = d3.json("stock.json");
+	d3.json("stock.json", function(d) {
+		d.bboList.ask = +d.bboList.ask;
+		d.bboList.timeStr = parseTime(d.bboList.timeStr);
+		return d;
+	}, function(error, data) {
+		if (error) throw error;
+	});
 
-	x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
-	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
+	x.domain(d3.extent(stock, function(d) { return d.bboList.timeStr;}));
+	y.domain(d3.extent(stock, function(d) { return d.bboList.ask; }));
 
 	svg.append("g")
 		.attr("transform", "translate(0," + height + ")")
@@ -47,7 +53,7 @@
 		.text("Price ($)");
 
 	svg.append("g")
-		.datum(data)
+		.datum(stock)
 		.attr("class", "line")
 		.attr("d", line);
 </script>
