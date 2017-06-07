@@ -37,7 +37,7 @@ d3.json("stock.json", function(error, data) {
   for (k in data) {
   	var k_data = data[k];
   	k_data.forEach(function(d) {                              
-  		d.timeStr = parseDate(d.timeStr);                          
+  		d.timeStr = parseTime(d.timeStr);                          
   		d.ask = +d.ask;                               
   	});
   }
