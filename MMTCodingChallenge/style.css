@@ -18,12 +18,23 @@ h1 {
 }
 
 .line {
-  stroke: steelblue;
+  stroke: rgb(154, 94, 32);
   fill: none;
   stroke-width: 2px;
 }
 
 .area {
-	fill: steelblue;
+	fill: rgb(154, 94, 32);
+	stroke-width: 0px;
+}
+
+.line1 {
+  stroke: rgb(70, 115, 73);
+  fill: none;
+  stroke-width: 2px;
+}
+
+.area1 {
+	fill: rgb(70, 115, 73);
 	stroke-width: 0px;
 }

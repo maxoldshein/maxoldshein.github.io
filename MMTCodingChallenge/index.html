@@ -35,6 +35,16 @@
     	.y(function(d) { return y(d.ask); })
     	.curve(d3.curveStepAfter);
 
+    var area2 = d3.area()
+    	.x(function(d) { return x(d.timeStr); })
+    	.y0(height)
+    	.y1(function(d) { return y(d.bid); })
+    	.curve(d3.curveStepAfter);
+
+    var valueline1 = d3.line()
+    	.x(function(d) { return x(d.timeStr)})
+    	.y(function(d) { return y(d.bid) })
+    	.curve(d3.curveStepAfter);
 
 	// append the svg obgect to the body of the page
 	// appends a 'group' element to 'svg'
@@ -52,16 +62,17 @@
 	  // format the data
 	  data.forEach(function(d) {
 	  	d.timeStr = parseTime(d.timeStr);
-	  	console.log(d.timeStr);
 	  	tempVal = parsePennies(d.ask);
 	  	d.ask = +tempVal;
-	  	console.log(d.ask);
+	  	tempVal1 = parsePennies(d.bid);
+	  	d.bid = +tempVal1
 	  });
 
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
-	  y.domain([d3.min(data, function(d) { return d.ask; }) - .4, d3.max(data, function(d) { return d.ask; }) + .001]);
+	  y.domain([d3.min(data, function(d) { return Math.min(d.ask, d.bid); }), d3.max(data, function(d) { return Math.max(d.ask, d.bid); })]);
 
+	  //Add the area path
 	  svg.append("path")
 	      .data([data])
 	      .attr("class", "area")
@@ -72,10 +83,24 @@
 	      .data([data])
 	      .attr("class", "line")
 	      .attr("d", valueline);
+
+	  //Add the area1 path
+	  svg.append("path")
+	  	.data([data])
+	  	.attr("class", "area1")
+	  	.attr("d", area1)
+
+	  //Add the valueline1 path
+	  svg.append("path")
+	  	.data([data])
+	  	.attr("class", "line1")
+	  	.attr("d", valueline1);
+
 	  // Add the X Axis
 	  svg.append("g")
 	      .attr("transform", "translate(0," + height + ")")
 	      .call(d3.axisBottom(x));
+
 	  // Add the Y Axis
 	  svg.append("g")
 	      .call(d3.axisLeft(y));
