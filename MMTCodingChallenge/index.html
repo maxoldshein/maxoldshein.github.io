@@ -72,9 +72,9 @@
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
 	  y.domain([
 	  	d3.min(data, function(d) {
-	  		return Math.min(d.bid, d.ask);}),
+	  		return d.ask; }),
 	  	d3.max(data, function(d) {
-	  		return Math.max(d.bid, d.ask); })
+	  		return d.bid; })
 	  ]);
 
 	  //Add the area path
