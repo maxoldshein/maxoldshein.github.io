@@ -52,6 +52,7 @@
 	  // format the data
 	  data.forEach(function(d) {
 	  	d.timeStr = parseTime(d.timeStr);
+	  	console.log(d.timeStr);
 	  	tempVal = parsePennies(d.ask);
 	  	d.ask = +tempVal;
 	  	console.log(d.ask);
