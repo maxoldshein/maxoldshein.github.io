@@ -41,8 +41,8 @@
 		if (error) throw error;
 	});
 
-	x.domain(d3.extent(stock, function(d) { return d.bboList.timeStr;}));
-	y.domain(d3.extent(stock, function(d) { return d.bboList.ask; }));
+	x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
+	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
 
 	svg.append("g")
 		.attr("transform", "translate(0," + height + ")")
@@ -53,7 +53,7 @@
 		.text("Price ($)");
 
 	svg.append("g")
-		.datum(stock)
+		.datum(data)
 		.attr("class", "line")
 		.attr("d", line);
 </script>
