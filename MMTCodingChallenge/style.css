@@ -18,7 +18,7 @@ h1 {
 }
 
 .line {
-	fill: none;
-	stroke: steelblue;
-	stroke-width: 1.5px;
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
 }
