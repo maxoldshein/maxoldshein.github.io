@@ -46,7 +46,7 @@ d3.json("stock.json", function(error, data) {
   y.domain([0, d3.max(data, function(d) { return d.bboList.ask; })]);
   // Add the valueline path.
   svg.append("path")
-      .data([data])
+      .data(data)
       .attr("class", "line")
       .attr("d", valueline);
   // Add the X Axis
