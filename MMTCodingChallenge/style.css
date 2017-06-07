@@ -19,6 +19,6 @@ h1 {
 
 .line {
   stroke: black;
-  fill: black;
+  fill: none;
   stroke-width: 2px;
 }
