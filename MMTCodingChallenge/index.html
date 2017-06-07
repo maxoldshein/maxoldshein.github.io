@@ -8,86 +8,52 @@
 </head>
 <body>
 <script>
-	function loadJSON(callback) {
-		var xobj = new XMLHttpRequest();
-		xobj.overrideMimeType("application/json");
-		xobj.open('GET', 'stock.json', true);
-		xobj.onreadystatechange = function() {
-        
-        	if (xobj.readyState == 4 && xobj.status == "200") {
-            	callback(xobj.responseText);
-        	}
-    	}
-    	xobj.send(null);
-	}
-
-	loadJSON(function(response) {
-		console.log("IN LOAD JSON");
-		var data = JSON.parse(response);
-
-		console.log("data: " + data);
-		console.log("bboList: " + data);
-		console.log("tradeList: " + data);
-
-		alert(data.bboList[0].ask + " " + data.bboList[0].timeStr);
+	alert(data.bboList[0].ask + " " + data.bboList[0].timeStr);
 		
-		function parsePennies(num) {return (num / 10000);}
+	function parsePennies(num) {return (num / 10000);}
 
-		var margin = {top: 20, right: 20, bottom: 30, left: 50},
-			width = 960 - margin.left - margin.right,
-			height = 500 - margin.top - margin.bottom;
+	var margin = {top: 20, right: 20, bottom: 30, left: 50},
+		width = 960 - margin.left - margin.right,
+		height = 500 - margin.top - margin.bottom;
 
-		var parseTime = d3.timeParse("%H:%M %p");
+	var parseTime = d3.timeParse("%H:%M %p");
 
-		var x = d3.scaleTime()
-			.range([0, width]);
+	var x = d3.scaleTime()
+		.range([0, width]);
 
-		var y = d3.scaleLinear()
-			.range([height, 0]);
+	var y = d3.scaleLinear()
+		.range([height, 0]);
 
-		var line = d3.area()
-			.x(function(d) {return x(d.bboList.timeStr);})
-			.y(function(d) {return y(d.bboList.ask);})
-			.curve(d3.curveStepAfter);
+	var line = d3.area()
+		.x(function(d) {return x(d.bboList.timeStr);})
+		.y(function(d) {return y(d.bboList.ask);})
+		.curve(d3.curveStepAfter);
 
-		var svg = d3.select("body").append("svg")
-			.attr("width", width + margin.left + margin.right)
-			.attr("height", height + margin.top + margin.bottom)
-			.append("g")
-			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	var svg = d3.select("body").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-		/*data.forEach(function(d) {
-			d.bboList.ask = +d.bboList.ask;
-			d.bboList.timeStr = parseTime(d.bboList.timeStr);
-			console.log("timeStr: " + d.bboList);
-		})*/
-
-		alert(parsePennies(data.bboList[0].ask) + " " + parseTime(data.bboList[0].timeStr));
-
-		for (var i = 0; i < data.bboList.length; i++) {
-			data.bboList[i].ask = +(parsePennies(data.bboList.ask));
-			data.bboList[i].timeStr = parseTime(data.bboList.timeStr);
-			console.log("timeStr: " + data.bboList[i].timeStr);
-			console.log("ask: " + data.bboList[i].ask);
-			console.log("i: " + i);
-		}
-
-		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
-		y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
-
-		svg.append("g")
-			.attr("transform", "translate(0," + height + ")")
-			.call(d3.axisBottom(x));
-
-		svg.append("g")
-			.call(d3.axisLeft(y))
-			.text("Price ($)");
-
-		svg.append("g")
-			.datum(data)
-			.attr("class", "line")
-			.attr("d", line);
+	d3.json("stock.json", function(data) {
+		console.log(data[0]);
 	});
+
+	x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
+	y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
+
+	svg.append("g")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.axisBottom(x));
+
+	svg.append("g")
+		.call(d3.axisLeft(y))
+		.text("Price ($)");
+
+	svg.append("g")
+		.datum(data)
+		.attr("class", "line")
+		.attr("d", line);
 </script>
 </body>
 </html>
