@@ -41,7 +41,7 @@
 	  // format the data
 	  data.forEach(function(d) {
 	  	d.timeStr = parseTime(d.timeStr);
-	  	tempVal = d.ask;
+	  	tempVal = parsePennies(d.ask);
 	  	d.ask = +tempVal;
 	  });
 
@@ -60,6 +60,7 @@
 	      .call(d3.axisBottom(x));
 	  // Add the Y Axis
 	  svg.append("g")
+	  	.text("Price ($)");
 	      .call(d3.axisLeft(y));
 	});
 </script>
