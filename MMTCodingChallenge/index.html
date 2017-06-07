@@ -10,11 +10,14 @@
 <script>		
 	function parsePennies(num) {return (num / 10000);}
 
-	var margin = {top: 20, right: 20, bottom: 30, left: 50},
-		width = 960 - margin.left - margin.right,
-		height = 500 - margin.top - margin.bottom;
-
 	var parseTime = d3.timeParse("%H:%M:%S.%L");
+
+	var svg = d3.select("svg"),
+		margin = {top: 20, right: 20, bottom: 30; left: 50},
+		width = +svg.attr("width"). - margin.left - margin.right,
+		height = +svg.attr("height") - margin.top - margin.bottom,
+		g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 
 	var x = d3.scaleTime()
 		.range([0, width]);
@@ -27,14 +30,8 @@
 		.y(function(d) {return y(d.bboList.ask);})
 		.curve(d3.curveStepAfter);
 
-	var svg = d3.select("body").append("svg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
-		.append("g")
-		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
 	d3.json("stock.json", function(d) {
-		d.bboList.ask = +d.bboList.ask;
+		d.bboList.ask = +(parsePennies(d.bboList.ask));
 		d.bboList.timeStr = parseTime(d.bboList.timeStr);
 		return d;
 	}, function(error, data) {
@@ -51,7 +48,7 @@
 			.call(d3.axisLeft(y))
 			.text("Price ($)");
 
-		svg.append("g")
+		svg.append("path")
 			.datum(data)
 			.attr("class", "line")
 			.attr("d", line);
