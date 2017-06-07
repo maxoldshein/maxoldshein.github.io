@@ -24,7 +24,8 @@
 	// define the line
 	var valueline = d3.line()
     	.x(function(d) { return x(d.timeStr); })
-    	.y(function(d) { return y(d.ask); });
+    	.y(function(d) { return y(d.ask); })
+    	.curve(d3.curveStepAfter);
 	// append the svg obgect to the body of the page
 	// appends a 'group' element to 'svg'
 	// moves the 'group' element to the top left margin
@@ -61,7 +62,8 @@
 	      .call(d3.axisBottom(x));
 	  // Add the Y Axis
 	  svg.append("g")
-	      .call(d3.axisLeft(y));
+	      .call(d3.axisLeft(y))
+	      .text("Price ($)");
 	});
 </script>
 </script>
