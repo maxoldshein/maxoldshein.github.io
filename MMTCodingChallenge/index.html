@@ -7,16 +7,20 @@
 	<script src="http://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-<svg class="contentSvg"></svg>
 <script>		
 	function parsePennies(num) {return (num / 10000);}
 
 	var parseTime = d3.timeParse("%H:%M:%S.%L");
 
-	var svg = d3.select(".contentSvg"),
-    	margin = {top: 20, right: 20, bottom: 30, left: 50},
-    	width = svg.attr("width") - margin.left - margin.right,
-    	height = svg.attr("height") - margin.top - margin.bottom;
+	var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    	width = 960 - margin.left - margin.right,
+    	height = 500 - margin.top - margin.bottom;
+
+	var svg = d3.select("body").append("svg")
+    		.attr("width", width + margin.left + margin.right)
+    		.attr("height", height + margin.top + margin.bottom)
+  		.append("g")
+    		.attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
 
 	var x = d3.scaleTime()
@@ -37,21 +41,23 @@
 	}, function(error, data) {
 		if (error) throw error;
 
-		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr;}));
-		y.domain(d3.extent(data, function(d) { return d.bboList.ask; }));
+		x.domain(d3.extent(data, function(d) { return d.bboList.timeStr; }));
+		y.domain([0, d3.max(data, function(d) { return d.bboList.ask; })]);
 
-		svg.append("g")
-			.attr("transform", "translate(0," + height + ")")
-			.call(d3.axisBottom(x));
-
-		svg.append("g")
-			.call(d3.axisLeft(y))
-			.text("Price ($)");
-
+		//Add the line
 		svg.append("path")
-			.datum(data)
+			.data([data])
 			.attr("class", "line")
 			.attr("d", line);
+
+		//Add the X-axis
+		svg.append("g")
+			.attr("transform", "translate(0," + height + ")");
+			.call(d3.axisBottom(x));
+
+		//Add the Y-axis
+		svg.append("g")
+			.call(d3.axisLeft(y));
 	});
 </script>
 </body>
