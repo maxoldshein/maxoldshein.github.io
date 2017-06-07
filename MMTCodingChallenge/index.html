@@ -21,11 +21,16 @@
 	// set the ranges
 	var x = d3.scaleTime().range([0, width]);
 	var y = d3.scaleLinear().range([height, 0]);
-	// define the line
-	var valueline = d3.area()
+
+	var area = d3.area()
     	.x(function(d) { return x(d.timeStr); })
-    	.y(function(d) { return y(d.ask); })
-    	.curve(d3.curveStepAfter);
+    	.y0(height)
+    	.y1(function(d) { return y(d.ask); });
+
+	// define the line
+	var valueline = d3.line()
+    	.x(function(d) { return x(d.timeStr); })
+    	.y(function(d) { return y(d.ask); });
 
 
 	// append the svg obgect to the body of the page
@@ -52,6 +57,11 @@
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
 	  y.domain([d3.min(data, function(d) { return d.ask; }) - .4, d3.max(data, function(d) { return d.ask; })]);
+
+	  svg.append("path")
+	      .data([data])
+	      .attr("class", "area")
+	      .attr("d", area);
 
 	  // Add the valueline path.
 	  svg.append("path")
