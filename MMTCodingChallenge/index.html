@@ -14,7 +14,7 @@
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
-	var parseTime = d3.timeParse("%H:%M;");
+	var parseTime = d3.timeParse("%H:%M:%S.%L");
 
 	var x = d3.scaleTime()
 		.range([0, width]);
