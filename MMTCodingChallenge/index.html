@@ -24,7 +24,7 @@
 
 	var area = d3.area()
     	.x(function(d) { return x(d.timeStr); })
-    	.y0(height)
+    	.y0(0)
     	.y1(function(d) { return y(d.ask); });
 
 	// define the line
