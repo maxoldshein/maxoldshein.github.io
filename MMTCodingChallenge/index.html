@@ -47,7 +47,7 @@
 
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
-	  y.domain([d3.min(data, function(d) { return parsePennies(d.ask) - .2; }), d3.max(data, function(d) { return parsePennies(d.ask) + .2; })]);
+	  y.domain([d3.min(data, function(d) { return parsePennies(d.ask) - .4; }), d3.max(data, function(d) { return parsePennies(d.ask) + .1; })]);
 	  // Add the valueline path.
 	  svg.append("path")
 	      .data(data)
