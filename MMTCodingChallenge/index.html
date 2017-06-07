@@ -46,8 +46,8 @@
 	  });
 
 	  // Scale the range of the data
-	  x.domain(d3.extent(data, function(d) { return d.bboList.timeStr; }));
-	  y.domain([0, d3.max(data, function(d) { return d.bboList.ask; })]);
+	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
+	  y.domain([0, d3.max(data, function(d) { return d.ask; })]);
 	  // Add the valueline path.
 	  svg.append("path")
 	      .data(data)
