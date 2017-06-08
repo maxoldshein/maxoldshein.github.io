@@ -27,3 +27,11 @@ h1 {
 	fill: rgb(70, 115, 73);
 	stroke-width: 0px;
 }
+
+.dot {
+	stroke: rgb(0, 0, 0);
+}
+
+.dot1 {
+	stroke: rgb(205, 89, 107);
+}
