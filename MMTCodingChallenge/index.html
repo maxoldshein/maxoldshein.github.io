@@ -33,18 +33,18 @@
 	var valueline = d3.line()
     	.x(function(d) { return x(d.timeStr); })
     	.y(function(d) { return y(d.ask); })
-    	//.curve(d3.curveStepAfter);
+    	.curve(d3.curveStepAfter);
 
     var area1 = d3.area()
     	.x(function(d) { return x(d.timeStr); })
     	.y0(height)
     	.y1(function(d) { return y(d.bid); })
-    	//.curve(d3.curveStepAfter);
+    	.curve(d3.curveStepAfter);
 
     var valueline1 = d3.line()
     	.x(function(d) { return x(d.timeStr)})
     	.y(function(d) { return y(d.bid) })
-    	//.curve(d3.curveStepAfter);
+    	.curve(d3.curveStepAfter);
 
 	// append the svg obgect to the body of the page
 	// appends a 'group' element to 'svg'
@@ -67,6 +67,7 @@
 	  	tempVal1 = parsePennies(d.bid);
 	  	d.bid = +tempVal1
 
+	  	console.log("d.timeStr: " + timeStr);
 	  	console.log("d.bid: " + d.bid);
 	  	console.log("d.ask: " + d.ask);
 	  });
