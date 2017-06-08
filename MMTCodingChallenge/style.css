@@ -29,9 +29,9 @@ h1 {
 }
 
 .dot {
-	stroke: rgb(0, 0, 0);
+	fill: rgb(0, 0, 0);
 }
 
 .dot1 {
-	stroke: rgb(205, 89, 107);
+	fill: rgb(205, 89, 107);
 }
