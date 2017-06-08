@@ -27,7 +27,7 @@
     	.x(function(d) { return x(d.timeStr); })
     	.y0(0)
     	.y1(function(d) { return y(d.ask); })
-    	//.curve(d3.curveStepAfter);
+    	.curve(d3.curveStepAfter);
 
 	// define the line
 	var valueline = d3.line()
@@ -67,7 +67,7 @@
 	  	tempVal1 = parsePennies(d.bid);
 	  	d.bid = +tempVal1
 
-	  	console.log("d.timeStr: " + timeStr);
+	  	console.log("d.timeStr: " + d.timeStr);
 	  	console.log("d.bid: " + d.bid);
 	  	console.log("d.ask: " + d.ask);
 	  });
