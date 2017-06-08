@@ -14,7 +14,7 @@ svg {
 .line {
   stroke: rgb(154, 94, 32);
   fill: none;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .area {
@@ -25,7 +25,7 @@ svg {
 .line1 {
   stroke: rgb(70, 115, 73);
   fill: none;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .area1 {
