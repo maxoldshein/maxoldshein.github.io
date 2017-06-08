@@ -93,7 +93,6 @@
 	  	tempTime = d.time / 1000000;
 	  	tempTime2 = millisecondsToTime(tempTime);
 	  	d.time = parseTime(tempTime2);
-	  	console.log(d.time);
 	  	tempPrice = parsePennies(d.price);
 	  	d.price = +tempPrice;
 	  	d.shares = d.shares;
@@ -110,7 +109,7 @@
 	  });
 
 	  // Scale the range of the data
-	  x.domain(d3.extent(data, function(d) { return d.timeStr - 1; }));
+	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
 	  y.domain([d3.min(data, function(d) { return d.bid ;}), d3.max(data, function(d) { return d.ask; }) + .01]);
 
 	  //Add the area path
@@ -142,14 +141,16 @@
 	 	.enter().append("circle")
 	 		.attr("r", 1)
 	 		.attr("cx", function(d) { return x(d.time); })
-	 		.attr("cy", function(d) { return y(d.price); });
+	 		.attr("cy", function(d) { return y(d.price); })
+	 		.style("fill", rgb(0, 0, 0));
 
 	 svg.selectAll(".dot1")
 	 		.data(pTrades)
 	 	.enter().append("circle")
 	 		.attr("r", 1)
 	 		.attr("cx", function(d) { return x(d.time) })
-	 		.attr("cy", function(d) { return y(d.price) });
+	 		.attr("cy", function(d) { return y(d.price) })
+	 		.style("fill", rgb(205, 89, 107));
 
 	  // Add the X Axis
 	  svg.append("g")
