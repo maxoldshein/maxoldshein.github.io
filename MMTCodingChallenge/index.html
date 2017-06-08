@@ -141,7 +141,7 @@
 	 		.data(eTrades)
 	 	.enter().append("circle")
 	 		.attr("r", 5)
-	 		.attr("cx", function(d) { return x(d.date); })
+	 		.attr("cx", function(d) { return x(d.time); })
 	 		.attr("cy", function(d) { return y(d.price); });
 
 	  // Add the X Axis
