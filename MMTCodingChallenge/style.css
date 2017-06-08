@@ -6,6 +6,10 @@ h1 {
 	text-align: center;
 }
 
+.visualization {
+	margin: 0px auto;
+}
+
 .line {
   stroke: rgb(154, 94, 32);
   fill: none;
