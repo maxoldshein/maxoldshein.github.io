@@ -91,7 +91,9 @@
 	  var data1 = tradeList;
 	  data1.forEach(function(d) {
 	  	tempTime = d.time / 1000000;
-	  	d.time = millisecondsToTime(tempTime);
+	  	tempTime2 = millisecondsToTime(tempTime);
+	  	d.time = parseTime(tempTime2);
+	  	console.log(d.time);
 	  	tempPrice = parsePennies(d.price);
 	  	d.price = +tempPrice;
 	  	d.shares = d.shares;
@@ -139,7 +141,7 @@
 	 		.data(eTrades)
 	 	.enter().append("circle")
 	 		.attr("r", 5)
-	 		.attr("cx", function(d) { return x(d.time); })
+	 		.attr("cx", function(d) { return x(d.date); })
 	 		.attr("cy", function(d) { return y(d.price); });
 
 	  // Add the X Axis
