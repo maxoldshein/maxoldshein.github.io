@@ -37,7 +37,7 @@
 	// parse the date / time
 	var parseTime = d3.timeParse("%H:%M:%S.%L");
 
-	var formatTime = d3.timeFormat("%H:%M:S/%L");
+	var formatTime = d3.timeFormat("%H:%M:%S.%L");
 	// set the ranges
 	var x = d3.scaleTime().range([0, width]);
 	var y = d3.scaleLinear().range([height, 0]);
