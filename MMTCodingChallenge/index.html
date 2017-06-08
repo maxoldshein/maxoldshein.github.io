@@ -83,10 +83,6 @@
 	  	d.ask = +tempAsk;
 	  	tempBid = parsePennies(d.bid);
 	  	d.bid = +tempBid;
-
-	  	console.log("d.timeStr: " + d.timeStr);
-	  	console.log("d.bid: " + d.bid);
-	  	console.log("d.ask: " + d.ask);
 	  });
 
 	  var eTrades = [];
@@ -110,9 +106,6 @@
 	  		pTrades.push(d);
 	  	}
 	  });
-
-	  console.log("min: " + d3.min(data, function(d) { return d.bid; }));
-	  console.log("max: " + d3.max(data, function(d) { return d.ask; }));
 
 	  // Scale the range of the data
 	  x.domain(d3.extent(data, function(d) { return d.timeStr; }));
