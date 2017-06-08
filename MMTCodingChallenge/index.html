@@ -154,7 +154,7 @@
 	 			div.transition()
 	 				.duration(200)
 	 				.style("opacity", .9);
-	 			div.html("Time: " + d.time + "<br>Price: " + d.price + "<br>Shares: " + d.shares + "<br>Trade Type: " + d.tradeType + "<br>Order #: " + d.orderReferenceNumber)
+	 			div.html("Time: " + formatTime(d.time) + "<br>Price: " + d.price + "<br>Shares: " + d.shares + "<br>Trade Type: " + d.tradeType + "<br>Order #: " + d.orderReferenceNumber)
 	 				.style("left", (d3.event.pageX) + "px")
 	 				.style("top", (d3.event.pageY - 28) + "px");
 	 		})
@@ -175,7 +175,7 @@
 	 			div.transition()
 	 				.duration(200)
 	 				.style("opacity", .9);
-	 			div.html("Time: " + d.time + "<br>Price: " + d.price + "<br>Shares: " + d.shares + "<br>Trade Type: " + d.tradeType + "<br>Order #: " + d.orderReferenceNumber)
+	 			div.html("Time: " + formatTime(d.time) + "<br>Price: " + d.price + "<br>Shares: " + d.shares + "<br>Trade Type: " + d.tradeType + "<br>Order #: " + d.orderReferenceNumber)
 	 				.style("left", (d3.event.pageX) + "px")
 	 				.style("top", (d3.event.pageY - 28) + "px");
 	 		})
