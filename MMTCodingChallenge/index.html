@@ -95,7 +95,7 @@
 	  var data1 = tradeList;
 	  data1.forEach(function(d) {
 	  	tempTime = d.time / 1000000;
-	  	d.time = millisecondsToTime(temptime);
+	  	d.time = millisecondsToTime(tempTime);
 	  	tempPrice = parsePennies(d.price);
 	  	d.price = +tempPrice;
 	  	d.shares = d.shares;
