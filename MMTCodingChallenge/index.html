@@ -229,6 +229,7 @@
 		.attr("width", width)
 		.attr("height", height)
 		.attr("fill", "none")
+		.attr("pointer-events", "all")
 		.on("mouseout", function() {
 			d3.select(".mouse-line")
 				.style("opacity", "0");
