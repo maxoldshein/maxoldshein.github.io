@@ -11,7 +11,7 @@ svg {
 	margin: 0px auto;
 }
 
-.line {
+#ask {
   stroke: rgb(154, 94, 32);
   fill: none;
   stroke-width: 1px;
@@ -22,7 +22,7 @@ svg {
 	stroke-width: 0px;
 }
 
-.line1 {
+#bid {
   stroke: rgb(70, 115, 73);
   fill: none;
   stroke-width: 1px;
@@ -44,7 +44,7 @@ svg {
 div.tooltip {   
  	position: absolute;           
   	text-align: center;           
-  	width: 90px;                  
+  	width: 85px;                  
   	height: 75px;                 
   	padding: 2px;             
   	font: 10px sans-serif;        
