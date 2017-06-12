@@ -258,41 +258,32 @@
 				});
 
 			d3.selectAll(".mouse-per-line")
-				.attr("transform", function(d, i) {
-					console.log("lines[i]: " + lines[i]);
-					var xDate = x.invert(mouse[0]),
-						bisect = d3.bisector(function(d) { return d.timeStr; }).right;
-						idx = bisect(d, xDate);
+	          .attr("transform", function(d, i) {
+	            console.log(width/mouse[0])
+	            var xDate = x.invert(mouse[0]),
+	                bisect = d3.bisector(function(d) { return d.timeStr; }).right;
+	                idx = bisect(d, xDate);
+	            
+	            var beginning = 0,
+	                end = lines[i].getTotalLength(),
+	                target = null;
 
-					var beginning = 0,
-						end = lines[i].getTotalLength(),
-						target = null;
-
-					console.log("i, end: " + i + "," + end);
-
-					while(true) {
-						console.log(width / mouse[0]);
-						target = Math.floor((beginning + end) / 2);
-						pos = lines[i].getPointAtLength(target);
-
-						if ((target == end) || (target == beginning) && pos.x != mouse[0]) {
-							break;
-						}
-
-						if (pos.x > mouse[0]) {
-							end = target;
-						} else if (pos.x < mouse[0]) {
-							beginning = target;
-						} else {
-							break;
-						}
-
-						d3.select(this).select("text")
-							.text(y.invert(pos.y).toFixed(2));
-
-						return "translate(" + mouse[0] + "," + pos.y + ")";
-					}  
-				});
+	            while (true){
+	              target = Math.floor((beginning + end) / 2);
+	              pos = lines[i].getPointAtLength(target);
+	              if ((target === end || target === beginning) && pos.x !== mouse[0]) {
+	                  break;
+	              }
+	              if (pos.x > mouse[0])      end = target;
+	              else if (pos.x < mouse[0]) beginning = target;
+	              else break; //position found
+	            }
+	            
+	            d3.select(this).select('text')
+	              .text(y.invert(pos.y).toFixed(2));
+	              
+	            return "translate(" + mouse[0] + "," + pos.y +")";
+	          });
 		})
 	});
 </script>
