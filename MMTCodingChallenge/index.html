@@ -259,6 +259,7 @@
 
 			d3.selectAll(".mouse-per-line")
 				.attr("transform", function(d, i) {
+					console.log("i: " + i);
 					var xDate = x.invert(mouse[0]),
 						bisect = d3.bisector(function(d) { return d.timeStr; }).right;
 						idx = bisect(d, xDate);
@@ -268,6 +269,7 @@
 						target = null;
 
 					while(true) {
+						console.log(width / mouse[0]);
 						target = Math.floor((beginning + end) / 2);
 						pos = lines[i].getPointAtLength(target);
 
