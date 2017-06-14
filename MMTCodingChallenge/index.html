@@ -113,23 +113,23 @@
 	  x.domain([d3.min(data, function(d) { return d.timeStr; }), d3.max(data, function(d) { return d.timeStr; })]);
 	  y.domain([d3.min(data, function(d) { return d.bid ;}), d3.max(data, function(d) { return d.ask; }) + .01]);
 
-	  svg.append("path")
+	 svg.append("path")
 	  	.data([data])
 	  	.attr("class", "area")
 	  	.attr("d", area);
 
-	  svg.append("path")
+	 svg.append("path")
 	  	.data([data])
 	  	.attr("class", "line")
 	  	.attr("id", "ask")
 	  	.attr("d", valueline);
 
-	  svg.append("path")
+	 svg.append("path")
 	  	.data([data])
 	  	.attr("class", "area1")
 	  	.attr("d", area1)
 
-	  svg.append("path")
+	 svg.append("path")
 	  	.data([data])
 	  	.attr("class", "line")
 	  	.attr("id", "bid")
@@ -177,12 +177,25 @@
 	 				.style("opacity", 0);
 	 		});
 
-	  svg.append("g")
-	      .attr("transform", "translate(0," + height + ")")
-	      .call(d3.axisBottom(x));
+	 svg.append("g")
+	 	.attr("transform", "translate(0," + height + ")")
+	 	.call(d3.axisBottom(x));
+
+	 svg.append("text")
+	 	.attr("transform", "translate(" + (width / 2) + "," + height + margin.top + 20 + ")")
+	 	.style("text-anchor", "middle")
+	 	.text("Time");
 
 	 svg.append("g")
-	      .call(d3.axisLeft(y));
+	 	.call(d3.axisLeft(y));
+
+	 svg.append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("y", 0 - margin.left)
+		.attr("x", 0 - (height / 2))
+		.attr("dy", "1em")
+		.attr("text-anchor", "middle")
+		.text("Price ($)");
 	});
 </script>
 </script>
