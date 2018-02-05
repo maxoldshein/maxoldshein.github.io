@@ -1,0 +1,70 @@
+/*Created by Maxwell Oldshein for Montague Market Technologies coding challenge*/
+
+body {
+	font: 12px sans-serif;
+}
+
+h1 {		
+	text-align: center;
+}
+
+svg {
+	display: block;
+	margin: 0px auto;
+}
+
+#ask {
+  	stroke: rgb(154, 94, 32);
+  	fill: none;
+  	stroke-width: 1px;
+}
+
+.area {
+	fill: rgb(154, 94, 32);
+	stroke-width: 0px;
+}
+
+#bid {
+  	stroke: rgb(70, 115, 73);
+  	fill: none;
+  	stroke-width: 1px;
+}
+
+.area1 {
+	fill: rgb(70, 115, 73);
+	stroke-width: 0px;
+}
+
+.dot {
+	fill: rgb(0, 0, 0);
+}
+
+.dot1 {
+	fill: rgb(205, 89, 107);
+}
+
+div.tooltip {   
+ 	position: absolute;           
+  	text-align: center;           
+  	width: 85px;                  
+  	height: 85px;                 
+  	padding: 2px;             
+  	font: 10px sans-serif;        
+  	background: lightsteelblue;   
+  	border: 0px;      
+  	border-radius: 8px;           
+  	pointer-events: none;         
+}
+
+#footer {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 75px;
+	width: 100%;
+	background: #d3d3d3;
+}
+
+.footer {
+	text-align: center;
+}
