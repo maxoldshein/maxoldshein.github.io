@@ -1,224 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	  <title>Maxwell Oldshein's Personal Website</title>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	  <link href="maxoldshein.github.io/favicon.ico" rel="icon" type="image/x-icon">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	  <!--<script type="jquery-3.1.0.min.js"></script>-->
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	  <link rel="stylesheet" href="main.css">
-	  <style>
-	  	.carousel-inner > .item > img,
-	  	.carousel-inner > .item > a > img {
-	    	width: 70%;
-	    	margin: auto;
-	  	}
-	  	#map-container {
-	  		height: 1000px;
-	  		width: 1450px;
-	  	}
-	  </style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Maxwell Oldshein's personal website.">
+		<meta name="keywords" content="Maxwell,Oldshein,Computer,Science">
+		<meta name="author" content="Maxwell Oldshein"/>
+		<title>Maxwell Oldshein's Website</title>
+		<!-- Bootstrap core CSS -->
+      <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-	  <script>
-	  	$('a').click(function(){
-    		$('html, body').animate({
-        		scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-    		}, 500);
-    		return false;
-		});
-	  </script>
+      <!-- Custom Fonts -->
+      <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+      
+      <!-- Custom styles for this template -->
+      <link href="css/agency.css" rel="stylesheet">
 	</head>
-	<body>
 
-	<nav class="navbar navbar-default" id="nav">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <!-- <span class="icon-bar"></span> -->
-	      </button>
-	      <a class="navbar-brand" href="#contact">Contact</a>
-	    </div>
+	<body id="page-top">
+		<!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+         <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Maxwell Oldshein</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               Menu
+               <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav text-uppercase ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link js-scroll-trigger" href="resume/resume.pdf">Resume</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-	        <li><a href="#about">About Me</a></li>
-	        <li><a href="resume.pdf">Resume</a></li>
-	        <li><a href="#experience">Experience</a></li>
-	        <!-- <li><a href="projects/projects.html">Projects</a></li> -->
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
+      <!-- Header -->
+      <header class="masthead">
+         <div class="container">
+            <div class="intro-text">
+               <div class="intro-lead-in">Welcome!</div>
+               <div class="intro-heading text-uppercase">My name is Maxwell Oldshein!</div>
+               <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">About Me</a>
+            </div>
+         </div>
+      </header>
 
-	<div class="container">
-	  <div class="jumbotron">
-	    <h1>Welcome!</h1>
-	    <p>My name is Maxwell Oldshein.  I am currently a senior at Boston College studying Computer Science and Economics.</p> 
-	  </div>
+      <!-- About -->
+      <section id="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">About Me</h2>
+                  <h3 class="section-subheading text-muted">Learn more about who I am and what I've done.</h3>
+                  <p class="text-muted">My name is Maxwell Oldshein and I am a recent graduate of Boston College, where I majored in Computer Science and minored in Economics. I am currently searching for an entry-level software engineering position in the technology field. As of December 2017, I am working as a Data Center Technical Analyst at Citi Group in New York, New York. While I have interacted with quite a few programming languages during my studies and my personal projects, my strongest languages are Java, Python, HTML/CSS, JavaScript, and SQL. I am constantly working to improve my programming skills and remain very active on many coding websites, such as Codecademy, HackerRank, CodeWars, and Coursera in order to sharpen my skills. Some of my interests include learning new web development technologies and expanding my mobile application development skills for both Android and iOS.</p>
+            </div>
+         </div>
+      </section>
 
-	  <a name="about"></a>
-	  <div class="row">
-	    <div class="col-sm-4">
-	      <h3>About Me</h3>
-	      <p>I am currently a senior enrolled at Boston College.   My major area of study is Computer Science with a minor in Economics.</p>
-	      <p>I am quite involved on campus, whether it be through my studies, volunteering or participating in clubs. I very much enjoy keeping busy. My two major extracurricular activities include BC BIGS Big Brother Big Sister Program and being a member of the Boston College Computer Science Society.</p>
-	    </div>
-	    <div class="col-sm-4">
-	      <h3>Relevant Courses</h3>
-	      <p>During my time here at Boston College I have been fortunate to take some very useful Computer Science courses.</p>
-	      <p>
-	      		Such courses include:
-	      		<ul>
-	      			<li>Computer Science I (Introduction)</li>
-	      			<li>Computer Science II (Data Structures)</li>
-	      			<li>Computer Organization</li>
-	      			<li>Computer Systems</li>
-	      			<li>Logic and Computation</li>
-	      			<li>Randomness and Computation</li>
-	      			<li>Web Application Development</li>
-	      			<li>Database Systems and Analysis</li>
-	      			<li>Object-Oriented Design</li>
-	      			<li>Algorithms</li>
-	      			<li>Computer Security</li>
-	      			<li>Mobile Application Development (Android)</li>
-	      			<li>
-	      		</ul>
-	      </p>
-	    </div>
+      <!-- Contact -->
+      <section class="bg-light" id="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">Contact Me</h4>
+                  <h3 class="section-subheading text-muted">There are a few ways to get in touch with me.</h5>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="team-member">
+                     <img class="mx-auto rounded-circle" src="images/MaxwellOldsheinPicture.png" alt="Maxwell Oldshein">
+                     <h4>Maxwell Oldshein</h4>
+                     <p class="text-muted">Recent Graduate Seeking Entry-Level Software Engineering Positions</p>
+                     <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                           <a href="mailto:oldshein@bc.edu">
+                              <i class="fa fa-envelope"></i>
+                           </a>
+                        </li>
+                        <li class="list-inline-item">
+                           <a href="https://github.com/maxoldshein">
+                              <i class="fa fa-github"></i>
+                           </a>
+                        </li>
+                        <li class="list-inline-item">
+                           <a href="https://www.linkedin.com/in/maxwelloldshein">
+                              <i class="fa fa-linkedin"></i>
+                           </a>
+                        </li>
+                        <li class="list-inline-item">
+                           <a href="https://angel.co/maxwell-oldshein">
+                              <i class="fa fa-angellist"></i>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-	    <a name="contact"></a>
-	    <div class="col-sm-4">
-	      <h3>Contact Me</h3>     
-	      <p>There a several ways to get in touch with me.  Please feel free to use any of the forms of contact listed below to reach me!</p>
-	      <p>
-	      	<a href="mailto:oldshein@bc.edu">Boston College Email</a>
-	      </p>
-	      <p>
-	      	<a href="https://www.linkedin.com/in/maxwell-oldshein-814025127?trk=nav_responsive_tab_profile_pic">LinkedIn</a>
-	      </p>
-	      <p>
-	      	<a href="https://github.com/maxoldshein">GitHub</a>
-	      </p>
-	      <p>
-	      	<a href="https://www.codecademy.com/maxwelloldshein">Codecademy</a>
-	      </p>
-	    </div>
-	  </div>
-	</div>
+      <!-- Experience -->
+      <section id="experience">
+         <div class="cotaniner">
+            <div class="row">
+               <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text text-uppercase">Experience</h2>
+                  <h3 class="section-subheading text-muted">My past experience and where I've worked!</h3>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-12">
+                  <ul class="timeline">
+                     <li>
+                        <div class="timeline-image">
+                           <img class="rounded-circle img-fluid" src="images/citi.jpeg" alt="Citi Group">
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>December 2017 - Present</h4>
+                              <h4 class="subheading">Citi Group</h4>
+                              <h4 class="subheading">Data Center Technical Analyst</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p class="text-muted">I currently work at Citi Group in their data center in New York, NY. At Citi Group, I have several responsibilities. Mainly, I perform the installation, maintenance, and troubleshooting of network devices in the data center. In addition to this responsibility, I handle sensitive media as well. I am responsible for the storage, loading, unloading, and logging of sensitive media tapes within Citi Group. I am also responsible for the the logging, degaussing, and destruction of sensitive media hard drives within the institution.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="timeline-inverted">
+                        <div class="timeline-image">
+                           <img class="rounded-circle img-fluid" src="images/bc.jpg" alt="Boston College">
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>August 2016 - January 2017</h4>
+                              <h4 class="subheading">Boston College</h4>
+                              <h4 class="subheading">Teaching Assistant</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p class="text-muted">During my time as an undergraduate at Boston College, I had the pleasure of serving as a teaching assistant for a course entitled Database Systems and Applications. The main focus of the course was to teach the students how to utilize Oracle SQL to create, interact with, and manipulate databases for business cases. As a teaching assistant for this course, I was responsible for assisting the professor in instructing two sections of approximately 40 students each. In addition to this, I was responsible for grading the students' assignments and holding office hours for the students on a weekly basis. The office hours served as an opportunity for me to assist the students in learning SQL, either through questions on course material or homework assignments.</p>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="timeline-image">
+                           <img class="rounded-circle img-fluid" src="images/northwell.jpeg" alt="Northwell Health">
+                        </div>
+                        <div class="timeline-panel">
+                           <div class="timeline-heading">
+                              <h4>June 2016 - August 2016</h4>
+                              <h4 class="subheading">Northwell Health</h4>
+                              <h4 class="subheading">IT Security Intern</h4>
+                           </div>
+                           <div class="timeline-body">
+                              <p class="text-muted">I had the pleasure of interning at Northwell Health, an 18 hospital, 63,000 employee health care system on Long Island, as an IT Security Intern. As an IT Security Intern, I had many tasks, many of which pertained to the assurance of the protection of Protected Health Information and Payment Card Information. In addition to these, I was responsible for working very closely with a project manager to roll out a proof of concept for an AirWatch mobile device management solution that the department was testing. My involvement in this project included hands-on testing of devices to see if the software met our standard of compliance. In addition to the testing, I also collected direct feedback from employees who were running the software on their devices regularly. I was also responsible for researching, installing, and testing a new case management tool on a Linux server for the department. In addition to these tasks, I was responsbile for detonating malware to test its effectiveness and capabilities on our system through a dedicated machine known as a "scrub box."</p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
 
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
-	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	    <li data-target="#myCarousel" data-slide-to="1"></li>
-	    <li data-target="#myCarousel" data-slide-to="2"></li>
-	    <li data-target="#myCarousel" data-slide-to="3"></li>
-	  </ol>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <span class="copyright">Created By Maxwell Oldshein</span>
+               </div>
+            </div>
+         </div>
+      </footer>
 
-	  <!-- Wrapper for slides -->
-	  <div class="carousel-inner" role="listbox">
-	  	<div class="item active">
-	      <img src="http://a4.static.dailyvoice.com/image/upload/c_limit,f_auto,w_640/Northwell_Logo_for_PR_hiRes_m6xp7w.jpg" alt="Northwell Health">
-	      <div class="carousel-caption">
-	        <h3>Northwell Health</h3>
-	        <p>During the summer of 2016, as a rising senior, I had the pleasure of interning at Northwell Health.</p>
-	      </div>
-	    </div>
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
 
-	    <div class="item">
-	      <img src="http://www.gr8technologyconferences.com/PublishingImages/Logos/Core_logo_4c%20(2).jpg" alt="Core BTS">
-	      <div class="carousel-caption">
-	        <h3>Core BTS</h3>
-	        <p>During the summer of 2015, as a rising junior, I had the pleasure of interning at Core BTS Inc.</p>
-	      </div>
-	    </div>
+      <!-- Plugin JavaScript -->
+      <script src="vendor/jquery-easing/jquery.easing.js"></script>
 
-	    <div class="item">
-	      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco">
-	      <div class="carousel-caption">
-	        <h3>Cisco Certification Course</h3>
-	        <p>During high school I had the opportunity to take a 2 year Cisco Certification Course accredited by a local college.</p>
-	      </div>
-	    </div>
-
-	    <div class="item">
-	      <img src="http://bccss.io/img/BCCSS.png" alt="BCCSS">
-	      <div class="carousel-caption">
-	        <h3>Boston College Computer Science Society</h3>
-	        <p>I am presently a member of the BC Computer Science Society, an active technology club on campus.</p>
-	      </div>
-	    </div>
-
-	    <div class="item">
-	      <img src="http://www.commteam.org/wp-content/uploads/2013/08/bbbs-logo.jpg" alt="BBBS">
-	      <div class="carousel-caption">
-	        <h3>Big Brothers Big Sisters</h3>
-	        <p>I am currently involved in BC BIGS which is a local chapter of the BIg Brother Big Sister mentoring program here on campus.</p>
-	      </div>
-	    </div>
-	  </div>
-
-	  <!-- Left and right controls -->
-	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
-	</div>
-
-	<a name="experience"></a>
-	<div class="container">
-		<div class="row">
-		<h4>Experience</h4>
-			 <div class="col-sm-12">
-			 	<div class="Northwell">
-		    		<h3>Northwell Health</h3>
-		    		<p>After completing my junior year, in the summer of 2016, I had the unique opportunity of interning at Northwell Health.</p>
-		      		<p>While interning at Northwell Health, I gained valuable insight into the nature of work in the technology sector of healthcare, with a major empahsis on cyber security. I was tasked with assisting in the assurance of protection of Patient Healthcare Information and Payment Card Information compliance. I was also responsible for independently testing and deploying a Case Management tool, Request Tracker for Incident Response (RTIR) on a Linux-based server. In addition, I was also responsible for testing and deploying a Proof of Concept for Northwell's rollout of VMWare's AirWatch Mobile Device Management tool.</p>
-		      	</div>
-		    </div>
-		    <div class="col-sm-3">
-		    	<h3>Core BTS</h3>
-		    	<p>After completing my sophomore year, in the summer of 2015, I had the unique opportunity of interning at Core BTS.</p>
-		      	<p>While interning at Core, I gained valuable insight into the nature of work in the technology industry. Many of my day-to-day tasks included troubleshooting and maintaining iPads and computer systems at various Long Island public high schools, as well as working closely with full-time Core BTS engineers to design and implement networks at the schools.</p>
-		    </div>
-		    <div class="col-sm-3">
-				<h3>Cisco Certification Course</h3>
-			    <p>During high school, in conjunction with SUNY Farmingdale State College, I was given the opportunity to take a 2 year Cisco CCNA Certification Course.</p>
-			    <p>As a result of this course, my interest in the Computer Science field was sparked.  During this 2 year course I learned the basics of network design and network implementation. Throughout the course I was able to work closely with Cisco networking equipment, both through simulation and actual hardware. The course gave me instruction in creating computer networks, troubleshooting networks and a basic understanding of network administration.</p>
-		    </div>
-		    <div class="col-sm-3">
-		      <h3>Boston College Computer Science Society</h3>
-		      <p>I am currently a member of the Boston College Computer Science Society, an active technology club on campus.</p>
-		      <p>BC Computer Science Society is responsible for many campus activities such as developmental workshops for students new to the Computer Science field and for students wishing to advance their skills, networking nights for students, and sponsoring technology companies to speak with students concerning the work environment in the industry. During the fall semester 2015 we were fortunate to have a series of talks on Cybersecurity from an IBM representative.</p>
-		    </div>
-		    <div class="col-sm-3">
-		      <h3>Big Brothers Big Sisters</h3>
-		      <p>I am currently involved in the mentoring program Big Brothers Big Sisters, or as it is called on our campus, "BC Bigs".</p>
-		      <p>BC Bigs has had a major impact on my experience here at Boston College.  I first joined the program at the start of my junior year and it has been an incredibly fulfilling experience.  Since joining the program, I have been able to be a true mentor and role model to an amazing 12 year old boy who might not have been given such an opportunity.  Working with him has given him new prospective on his life and he has done the same for me.  I cannot begin to expound on all the positive aspects of this program, but merely say it has been life changing for me and enriched my experience here at Boston College.</p>
-		    </div>
-	  	</div>
-	</div>
+      <!-- Custom scripts for this template -->
+      <script src="javascript/agency.js"></script>
 	</body>
-	<footer class="footer">
-		<div class="container">
-			<p>Page Views:
-				<a href="http://www.hitwebcounter.com" target="_blank"><img src="http://hitwebcounter.com/counter/counter.php?page=6420530&style=0008&nbdigits=5&type=ip&initCount=0" title="Page Views" Alt="http://www.hitwebcounter.com/" border="0"></a>
-			</p>
-		</div>
-	</footer>
 </html>
