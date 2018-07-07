@@ -171,6 +171,7 @@ header.masthead {
   color: white;
   height: 2000px;
   width: 100%;
+  overflow: hidden;
 }
 
 header.masthead .container {
