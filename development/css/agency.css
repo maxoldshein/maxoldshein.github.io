@@ -169,7 +169,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  height: 2000px;
+  height: auto;
   width: 100%;
   overflow: hidden;
 }
