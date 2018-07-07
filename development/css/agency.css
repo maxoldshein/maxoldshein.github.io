@@ -169,13 +169,6 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 2778px;
   width: 100%;
 }
@@ -211,9 +204,6 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 850px) {
-  header.masthead {
-    height: 1200px;
-  }
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
