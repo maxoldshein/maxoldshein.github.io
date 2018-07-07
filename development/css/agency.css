@@ -650,7 +650,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   z-index: 1;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   #particles-js {
     height: 0px;
     width: 100%
