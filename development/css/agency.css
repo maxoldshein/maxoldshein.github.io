@@ -210,7 +210,10 @@ header.masthead .intro-text .intro-heading {
   color: #8E64C9
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
+  header.masthead {
+    height: 1200px;
+  }
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
