@@ -1,5 +1,4 @@
-if($(window).width() >= 768) {
-    particlesJS('particles-js',
+particlesJS('particles-js',
         {
           "particles": {
             "number": {
@@ -116,4 +115,3 @@ if($(window).width() >= 768) {
             "background_size": "cover"
           }
         });
-}
