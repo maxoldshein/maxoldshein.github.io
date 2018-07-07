@@ -173,6 +173,10 @@ header.masthead {
   width: 100%;
 }
 
+header.masthead .biggerContainer {
+  width: 100%
+}
+
 header.masthead .container {
   position: relative;
   z-index: 2;
