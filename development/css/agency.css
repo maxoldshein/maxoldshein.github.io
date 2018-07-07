@@ -643,9 +643,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 #particles-js {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   position: absolute;
+  overflow: hidden;
   background-color: #202020;
   z-index: 1;
 }
