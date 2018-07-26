@@ -189,7 +189,8 @@ header.masthead .image {
 }
 
 header.masthead .intro-text {
-  position: relative;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 header.masthead .intro-text .intro-lead-in {
