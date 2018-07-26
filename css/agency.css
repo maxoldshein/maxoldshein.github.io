@@ -80,12 +80,12 @@ section h3.section-subheading {
 }
 
 ::-moz-selection {
-  background: #8E64C9;
+  background: #fed136;
   text-shadow: none;
 }
 
 ::selection {
-  background: #8E64C9;
+  background: #fed136;
   text-shadow: none;
 }
 
