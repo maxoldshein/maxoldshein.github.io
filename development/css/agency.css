@@ -179,13 +179,13 @@ header.masthead .container {
 }
 
 header.masthead .image img {
-  width: 125px;
-  height: 125px;
+  width: 225px;
+  height: 225px;
   border: 1px solid #000000;
 }
 
 header.masthead .image {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 header.masthead .intro-text {
