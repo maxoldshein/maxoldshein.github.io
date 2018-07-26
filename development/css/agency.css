@@ -672,7 +672,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 @media (max-width: 992px) {
   #particles-js {
-    height: 850px;
+    height: 800px;
     width: 100%
     position: absolute;
     background-color: #202020;
