@@ -181,11 +181,11 @@ header.masthead .container {
 header.masthead .intro-text img {
   width: 225px;
   height: 225px;
-  border: 7px solid #fff;
+  border: 7px solid #000000;
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -591,7 +591,7 @@ header.masthead .intro-text .intro-heading {
 .team-member img {
   width: 225px;
   height: 225px;
-  border: 7px solid #fff;
+  border: 7px solid #000000;
 }
 
 .team-member h4 {
