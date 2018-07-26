@@ -178,6 +178,12 @@ header.masthead .container {
   z-index: 2;
 }
 
+header.masthead .intro-text .img {
+  width: 225px;
+  height: 225px;
+  border: 7px solid #fff;
+}
+
 header.masthead .intro-text {
   padding-top: 150px;
   padding-bottom: 100px;
